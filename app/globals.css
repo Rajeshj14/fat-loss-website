@@ -3,6 +3,8 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --primary-gold: #d4ad5f;
+  --secondary-silver: #dcdcdc;
 }
 
 @theme inline {
