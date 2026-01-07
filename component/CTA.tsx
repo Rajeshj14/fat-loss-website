@@ -76,12 +76,12 @@
 // export default CTA;
 
 'use client'
-import { useState } from 'react';
+import { useState, MouseEvent, TouchEvent } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 export default function BeforeAfterCarousel() {
   const [currentCard, setCurrentCard] = useState(0);
-  const [sliderPositions, setSliderPositions] = useState([50, 50, 50, 50]);
+  const [sliderPositions, setSliderPositions] = useState<number[]>([50, 50, 50, 50]);
   const [isDragging, setIsDragging] = useState(false);
 
   const cards = [
@@ -111,11 +111,15 @@ export default function BeforeAfterCarousel() {
     }
   ];
 
-  const handleMove = (e, cardIndex) => {
+  const handleMove = (e: MouseEvent<HTMLDivElement> | TouchEvent<HTMLDivElement>, cardIndex: number) => {
     if (!isDragging) return;
     
     const rect = e.currentTarget.getBoundingClientRect();
-    const x = (e.clientX || e.touches?.[0]?.clientX) - rect.left;
+    const clientX = 'clientX' in e ? e.clientX : e.touches[0]?.clientX;
+    
+    if (!clientX) return;
+    
+    const x = clientX - rect.left;
     const percentage = (x / rect.width) * 100;
     
     const newPositions = [...sliderPositions];
@@ -220,11 +224,6 @@ export default function BeforeAfterCarousel() {
                           </div>
                         </div>
                       </div>
-
-                      {/* Instructions */}
-                      {/* <p className="text-center text-gray-600 mt-4 text-sm">
-                        👆 Drag the slider to compare
-                      </p> */}
                     </div>
                   </div>
                 </div>

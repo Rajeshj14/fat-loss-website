@@ -5,11 +5,11 @@ import { Play, Pause, Volume2, VolumeX, ChevronLeft, ChevronRight, Maximize, X }
 
 export default function VideoCarousel() {
   const [currentStartIndex, setCurrentStartIndex] = useState(0);
-  const [playingVideos, setPlayingVideos] = useState({});
-  const [mutedVideos, setMutedVideos] = useState({});
-  const [fullscreenVideo, setFullscreenVideo] = useState(null);
+  const [playingVideos, setPlayingVideos] = useState<Record<number, boolean>>({});
+  const [mutedVideos, setMutedVideos] = useState<Record<number, boolean>>({});
+  const [fullscreenVideo, setFullscreenVideo] = useState<number | null>(null);
   const [visibleCount, setVisibleCount] = useState(3); // Default to 3
-  const videoRefs = useRef({});
+  const videoRefs = useRef<Record<number, HTMLVideoElement | null>>({});
 
   const videos = [
     { id: 1, videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" },
@@ -60,15 +60,16 @@ export default function VideoCarousel() {
 
   const visibleVideos = getVisibleVideos();
 
-  const togglePlay = (id) => {
+  const togglePlay = (id: number) => {
     const video = videoRefs.current[id];
     if (video) {
       if (video.paused) {
         // Pause all other videos
         Object.keys(videoRefs.current).forEach(videoId => {
-          if (videoId !== id.toString() && videoRefs.current[videoId]) {
-            videoRefs.current[videoId].pause();
-            setPlayingVideos(prev => ({ ...prev, [videoId]: false }));
+          const numVideoId = Number(videoId);
+          if (numVideoId !== id && videoRefs.current[numVideoId]) {
+            videoRefs.current[numVideoId]?.pause();
+            setPlayingVideos(prev => ({ ...prev, [numVideoId]: false }));
           }
         });
         
@@ -81,7 +82,7 @@ export default function VideoCarousel() {
     }
   };
 
-  const toggleMute = (id) => {
+  const toggleMute = (id: number) => {
     const video = videoRefs.current[id];
     if (video) {
       video.muted = !video.muted;
@@ -106,7 +107,7 @@ export default function VideoCarousel() {
     setPlayingVideos({});
   };
 
-  const toggleFullscreen = (id) => {
+  const toggleFullscreen = (id: number | null) => {
     if (fullscreenVideo === id) {
       setFullscreenVideo(null);
     } else {
@@ -114,7 +115,7 @@ export default function VideoCarousel() {
     }
   };
 
-  const goToVideo = (index) => {
+  const goToVideo = (index: number) => {
     pauseAllVideos();
     setCurrentStartIndex(index);
   };
@@ -143,7 +144,7 @@ export default function VideoCarousel() {
         {/* Main Carousel Container */}
         <div className="relative">
           {/* Responsive Grid of Videos */}
-          <div className={`grid ${gridCols[visibleCount]} gap-4 sm:gap-6 h-120`}>
+          <div className={`grid ${gridCols[visibleCount as keyof typeof gridCols]} gap-4 sm:gap-6 h-120`}>
             {visibleVideos.map((video) => (
               <div 
                 key={video.id} 
@@ -152,7 +153,9 @@ export default function VideoCarousel() {
                 {/* Video Container */}
                 <div className="relative aspect-video bg-black">
                   <video
-                    ref={(el) => (videoRefs.current[video.id] = el)}
+                    ref={(el) => {
+                      videoRefs.current[video.id] = el;
+                    }}
                     className="w-full h-130 object-cover"
                     loop
                     muted={mutedVideos[video.id]}
@@ -314,7 +317,9 @@ export default function VideoCarousel() {
             
             <div className="w-full max-w-6xl">
               <video
-                ref={(el) => (videoRefs.current[`fs-${fullscreenVideo}`] = el)}
+                ref={(el) => {
+                  videoRefs.current[`fs-${fullscreenVideo}` as unknown as number] = el;
+                }}
                 className="w-full rounded-lg"
                 src={videos.find(v => v.id === fullscreenVideo)?.videoUrl}
                 controls
