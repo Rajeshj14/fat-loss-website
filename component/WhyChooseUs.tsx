@@ -119,7 +119,7 @@ export default function DoctorProfile() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-100 max-sm:py-5 py-20 px-4 overflow-hidden">
+    <div id='experts' className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-100 max-sm:py-5 py-20 px-4 overflow-hidden">
       <div className="max-w-7xl mx-auto">
         {/* Heading with decorative elements */}
         <div className={`text-center max-sm:mb-3 mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-10'}`}>
