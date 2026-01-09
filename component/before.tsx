@@ -128,16 +128,16 @@ export default function VideoCarousel() {
   };
 
   return (
-    <div className="min-h-screen via-gray-800 to-black flex items-center justify-center p-4 md:p-6">
+    <div className="min-h-screen via-gray-800 to-black flex items-center justify-center p-4 md:p-6 ">
       <div className="w-full max-w-7xl">
         <div className="text-center mb-8 max-sm:mb-3 md:mb-12">
           <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-black pt-3 max-sm:pt-0 mb-2 md:mb-3">
-            Fat Loss &<span className="text-[var(--primary-gold)]"> Body Transformation Care</span>
+            Real People &<span className="text-[var(--primary-gold)]"> Real Results.</span>
           </h1>
           <p className="text-gray-400 text-sm sm:text-base">
             {visibleCount === 1 ? '1 video on mobile' : 
              visibleCount === 2 ? '2 videos on tablet' : 
-             '3 videos on desktop'}Achieve safe and sustainable fat loss through personalized nutrition, lifestyle guidance, and clinically proven methods for long-term health and confidence
+             ''}Individual outcomes may vary based on age, health, and lifestyle.
           </p>
         </div>
 
@@ -152,6 +152,13 @@ export default function VideoCarousel() {
               >
                 {/* Video Container */}
                 <div className="relative aspect-video bg-black">
+                  {/* Video Number Badge */}
+                  {/* <div className="absolute top-2 left-2 sm:top-3 sm:left-3 z-10">
+                    <div className="bg-red-600/90 text-white font-bold rounded-full w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center text-sm sm:text-base shadow-lg">
+                      {video.id}
+                    </div>
+                  </div> */}
+
                   <video
                     ref={(el) => {
                       videoRefs.current[video.id] = el;
@@ -160,6 +167,7 @@ export default function VideoCarousel() {
                     loop
                     muted={mutedVideos[video.id]}
                     onClick={() => togglePlay(video.id)}
+                    src={video.videoUrl}
                   />
 
                   {/* Video Controls Overlay */}
@@ -217,93 +225,35 @@ export default function VideoCarousel() {
                         e.stopPropagation();
                         togglePlay(video.id);
                       }}
-                      className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-red-600/90 hover:bg-red-700 rounded-full p-4 sm:p-6 transition-all hover:scale-110 opacity-100 sm:opacity-0 sm:hover:opacity-100"
+                      className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#d4ad5f] rounded-full p-4 sm:p-6 transition-all hover:scale-110 opacity-100 sm:opacity-0 sm:hover:opacity-100"
                     >
                       <Play className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
                     </button>
                   )}
-
-                  {/* Video Number Badge */}
-                  <div className="absolute top-2 left-2 sm:top-3 sm:left-3 bg-black/70 text-white text-xs sm:text-sm font-bold px-2 sm:px-3 py-1 rounded-full">
-                    Video {video.id}
-                  </div>
                 </div>
               </div>
             ))}
           </div>
 
-          {/* Mobile Navigation Arrows - Inside container on mobile */}
+          {/* Navigation Arrows - Visible on all screens */}
           <button
             onClick={prevSet}
-            className="absolute -left-4 sm:-left-12 top-1/2 -translate-y-1/2 bg-white/10 hover:bg-white/20 text-white rounded-full p-2 sm:p-3 transition-all hover:scale-110"
+            className="absolute left-0 sm:-left-12 top-1/2 -translate-y-1/2 bg-[#d4ad5f] text-white rounded-full p-3 sm:p-4 transition-all hover:scale-110 shadow-lg z-20"
           >
-            <ChevronLeft className="w-4 h-4 sm:w-6 sm:h-6" />
+            <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6" />
           </button>
 
           <button
             onClick={nextSet}
-            className="absolute -right-4 sm:-right-12 top-1/2 -translate-y-1/2 bg-white/10 hover:bg-white/20 text-white rounded-full p-2 sm:p-3 transition-all hover:scale-110"
+            className="absolute right-0 sm:-right-12 top-1/2 -translate-y-1/2 bg-[#d4ad5f] text-white rounded-full p-3 sm:p-4 transition-all hover:scale-110 shadow-lg z-20"
           >
-            <ChevronRight className="w-4 h-4 sm:w-6 sm:h-6" />
+            <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6" />
           </button>
         </div>
 
         {/* Video Counter & Navigation Dots */}
-        <div className="mt-8 sm:mt-12 text-center">
-          <div className="flex items-center justify-center gap-3 mb-4 flex-wrap">
-            <span className="text-gray-400 text-xs sm:text-sm">
-              Showing {currentStartIndex + 1}-{Math.min(currentStartIndex + visibleCount, videos.length)} of {videos.length}
-            </span>
-            <span className="hidden sm:inline text-gray-500 mx-2">•</span>
-            <div className="flex items-center gap-2">
-              <span className="text-gray-500 text-xs">Layout:</span>
-              <div className="flex gap-1">
-                <div className={`w-2 h-2 rounded-full ${visibleCount === 1 ? 'bg-red-600' : 'bg-gray-600'}`}></div>
-                <div className={`w-2 h-2 rounded-full ${visibleCount === 2 ? 'bg-red-600' : 'bg-gray-600'}`}></div>
-                <div className={`w-2 h-2 rounded-full ${visibleCount === 3 ? 'bg-red-600' : 'bg-gray-600'}`}></div>
-              </div>
-            </div>
-          </div>
-          
-          {/* Navigation Dots - Responsive */}
-          <div className="flex flex-wrap justify-center gap-2 sm:gap-3 max-w-2xl mx-auto">
-            {videos.map((video, index) => (
-              <button
-                key={video.id}
-                onClick={() => goToVideo(index)}
-                className={`flex flex-col items-center group ${
-                  index >= currentStartIndex && index < currentStartIndex + visibleCount
-                    ? 'scale-110'
-                    : ''
-                }`}
-              >
-                <div className={`w-2 h-2 sm:w-3 sm:h-3 rounded-full transition-all mb-0 sm:mb-1 ${
-                  index >= currentStartIndex && index < currentStartIndex + visibleCount
-                    ? 'bg-red-600'
-                    : 'bg-white/30 hover:bg-white/50'
-                }`} />
-                <span className={`text-[10px] sm:text-xs transition-all hidden sm:block ${
-                  index >= currentStartIndex && index < currentStartIndex + visibleCount
-                    ? 'text-white font-bold'
-                    : 'text-gray-500 group-hover:text-gray-300'
-                }`}>
-                  {index + 1}
-                </span>
-              </button>
-            ))}
-          </div>
-        </div>
 
-        {/* Mobile Swipe Instructions */}
-        <div className="mt-6 text-center sm:hidden">
-          <p className="text-gray-500 text-xs flex items-center justify-center gap-2">
-            <span className="inline-flex items-center gap-1">
-              <ChevronLeft className="w-3 h-3" /> Swipe <ChevronRight className="w-3 h-3" />
-            </span>
-            <span className="text-gray-400">•</span>
-            <span>Tap video to play</span>
-          </p>
-        </div>
+        
 
         {/* Fullscreen Modal */}
         {fullscreenVideo && (
