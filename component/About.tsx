@@ -81,16 +81,11 @@ const AboutSection = () => {
 
             <button onClick={() => document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })}
               className="bg-gradient-to-t from-[var(--primary-gold)] to-[var(--secondary-silver)] text-white px-8 py-4 rounded-full font-semibold text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 hover:opacity-95 group relative overflow-hidden"
-              // style={{
-              //   backgroundImage: 'linear-gradient(135deg, var(--primary-gold), var(--secondary-silver))',
-              //   boxShadow: '0 10px 25px -5px rgba(212, 175, 55, 0.3)'
-              // }}
             >
               <span className="relative z-10 flex items-center justify-center gap-2">
                 <UserCircle className="w-5 h-5" />
                 Book Your Doctor-Led Weight Loss Consultation
               </span>
-              {/* <div className="absolute inset-0 bg-gradient-to-t from-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div> */}
             </button>
           </div>
 

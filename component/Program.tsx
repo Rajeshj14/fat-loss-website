@@ -136,12 +136,12 @@ export default function TreatmentSolutions() {
     {
       icon: Sparkles,
       title: "Cellulite & Inch Loss",
-      image: "https://images.unsplash.com/photo-1540206395-68808572332f?w=600&q=80"
+      image: "https://images.pexels.com/photos/8376292/pexels-photo-8376292.jpeg"
     }
   ];
 
   return (
-    <section className="relative max-sm:py-5 py-16 lg:py-24 bg-gradient-to-br from-gray-50 via-white to-gray-100 overflow-hidden">
+    <section className="relative max-sm:py-5 py-16 lg:py-8 bg-gradient-to-br from-gray-50 via-white to-gray-100 overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style={{backgroundImage: 'radial-gradient(circle, #d4ad5f 1px, transparent 1px)', backgroundSize: '40px 40px'}}></div>
@@ -153,7 +153,7 @@ export default function TreatmentSolutions() {
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center max-sm:mb-3 mb-12 lg:mb-16 animate-fade-in-up">
+        <div className="text-center max-sm:mb-3 mb-8 lg:mb-8 animate-fade-in-up">
           <h2 className="text-2xl sm:text-4xl lg:text-4xl font-extrabold max-sm:mb-0 mb-4">
             Targeted Solutions for <span className="bg-gradient-to-t from-[var(--primary-gold)] to-[var(--secondary-silver)] text-transparent bg-clip-text">Every Body Goal</span>
           </h2>
@@ -213,13 +213,21 @@ export default function TreatmentSolutions() {
 
         {/* CTA Button */}
         <div className="text-center animate-fade-in-up" style={{animationDelay: '0.5s'}}>
-          <button onClick={() => document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })} className="group relative px-8 sm:px-10 lg:px-12 py-4 sm:py-5 text-gray-900 text-lg sm:text-xl font-extrabold rounded-2xl overflow-hidden transition-all duration-300 hover:scale-105 animate-shimmer-bg bg-gradient-to-t from-[var(--primary-gold)] to-[var(--secondary-silver)]">
+          {/* <button onClick={() => document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })} className="group relative px-8 sm:px-10 lg:px-12 py-4 sm:py-5 text-gray-900 text-lg sm:text-xl font-extrabold rounded-2xl overflow-hidden transition-all duration-300 hover:scale-105 animate-shimmer-bg bg-gradient-to-t from-[var(--primary-gold)] to-[var(--secondary-silver)]">
             <span className="relative z-10 flex items-center justify-center gap-3 text-white">
               Find Your Personalized Treatment Plan
               <ArrowRight className="w-5 lg:w-6 h-5 lg:h-6 group-hover:translate-x-2 transition-transform duration-300" />
             </span>
            
-          </button>
+          </button> */}
+          <button onClick={() => document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })}
+              className="bg-gradient-to-t from-[var(--primary-gold)] to-[var(--secondary-silver)] text-white px-8 py-4 rounded-full font-semibold text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 hover:opacity-95 group relative overflow-hidden"
+            >
+              <span className="relative z-10 flex items-center justify-center gap-2">
+                Find Your Personalized Treatment Plan
+              <ArrowRight className="w-5 lg:w-6 h-5 lg:h-6 group-hover:translate-x-2 transition-transform duration-300" />
+              </span>
+            </button>
         </div>
       </div>
 

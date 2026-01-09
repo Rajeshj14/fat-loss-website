@@ -1,6 +1,6 @@
 'use client'
 
-import { Menu, X } from 'lucide-react';
+import { Menu, Phone, X } from 'lucide-react';
 import Image from 'next/image';
 import { useState } from 'react';
 
@@ -10,8 +10,8 @@ const Navbar = () => {
   const navLinks = [
     { name: 'Home', href: '/' },
     { name: 'About', href: '#about' },
-    { name: 'Programs', href: '#programs' },
-    { name: 'Why Us', href: '#why-us' },
+    // { name: 'Programs', href: '#programs' },
+    { name: 'Faq', href: '#faq' },
     { name: 'Experts', href: '#experts' },
     { name: 'Contact', href: '#contact' },
   ];
@@ -52,6 +52,14 @@ const Navbar = () => {
             ))}
           </div>
 
+          <div className="hidden md:block ">
+            <a href='type: +918826815442'
+              className="bg-gradient-to-t from-[var(--primary-gold)] to-[var(--secondary-silver)] flex text-white px-6 py-2 rounded-full hover:shadow-lg transition-all duration-300 transform hover:-translate-y-0.5"
+            >
+             <Phone className="w-5 h-5 animate-ring" />
+              +91 8826815442
+            </a>
+          </div>
           <div className="hidden md:block">
             <button
               onClick={() => scrollToSection('#contact')}
@@ -84,6 +92,12 @@ const Navbar = () => {
                 {link.name}
               </button>
             ))}
+             <button
+              onClick={() => scrollToSection('#contact')}
+              className="bg-gradient-to-t from-[var(--primary-gold)] to-[var(--secondary-silver)] text-white px-6 py-2 rounded-full hover:shadow-lg transition-all duration-300 transform hover:-translate-y-0.5"
+            >
+              Book Consultation
+            </button>
             <button
               onClick={() => scrollToSection('#contact')}
               className="w-full text-center bg-gradient-to-t from-[var(--primary-gold)] to-[var(--secondary-silver)] text-white px-6 py-2 rounded-full hover:shadow-lg transition-all duration-300 mt-2"

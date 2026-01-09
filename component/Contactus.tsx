@@ -29,7 +29,7 @@ const ReviewSection = () => {
   ];
 
   return (
-    <section className="py-20 max-sm:py-4 px-4 sm:px-6 lg:px-8 bg-white">
+    <section className="py-8 max-sm:py-4 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12 max-sm:mb-3">
           <h2 className="text-2xl sm:text-4xl font-bold text-gray-900 max-sm:mb-1 mb-4">

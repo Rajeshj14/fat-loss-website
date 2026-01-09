@@ -109,6 +109,7 @@
 
 // export default WhyChooseUs;
 'use client'
+import { ArrowRight } from 'lucide-react';
 import React, { useState, useEffect } from 'react';
 
 export default function DoctorProfile() {
@@ -119,7 +120,7 @@ export default function DoctorProfile() {
   }, []);
 
   return (
-    <div id='experts' className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-100 max-sm:py-5 py-20 px-4 overflow-hidden">
+    <div id='experts' className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-100 max-sm:py-5 py-10 px-4 overflow-hidden">
       <div className="max-w-7xl mx-auto">
         {/* Heading with decorative elements */}
         <div className={`text-center max-sm:mb-3 mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-10'}`}>
@@ -157,17 +158,13 @@ export default function DoctorProfile() {
 
             {/* Enhanced CTA Section */}
             <div className="pt-8 max-sm:pt-0">
-              <button onClick={() => document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })}
-                className="group relative px-10 py-5 text-white font-bold rounded-xl text-lg overflow-hidden transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
-                style={{ backgroundColor: '#d4ad5f' }}
+               <button onClick={() => document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })}
+              className="bg-gradient-to-t from-[var(--primary-gold)] to-[var(--secondary-silver)] text-white px-8 py-4 rounded-full font-semibold text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 hover:opacity-95 group relative overflow-hidden"
               >
-                <span className="relative z-10 flex items-center justify-center gap-3">
-                  Consult with Dr. Neha
-                  <svg className="w-5 h-5 group-hover:translate-x-2 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                  </svg>
-                </span>
-                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-0 group-hover:opacity-20 transform -skew-x-12 group-hover:translate-x-full transition-all duration-700"></div>
+              <span className="relative z-10 flex items-center justify-center gap-2">
+                 Consult with Dr. Neha
+              <ArrowRight className="w-5 lg:w-6 h-5 lg:h-6 group-hover:translate-x-2 transition-transform duration-300" />
+              </span>
               </button>
             </div>
           </div>

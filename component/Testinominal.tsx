@@ -346,6 +346,7 @@
 // }
 
 'use client'
+import { ArrowRight } from 'lucide-react';
 import React, { useState } from 'react';
 
 export default function FAQ() {
@@ -395,7 +396,7 @@ export default function FAQ() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-100 max-sm:py-6 py-16 px-4">
+    <div id='faq' className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-100 max-sm:py-6 py-10 px-4">
       <div className="max-w-6xl mx-auto">
         <h1 className="text-2xl md:text-4xl font-bold text-center max-sm:mb-4 mb-12">
           Frequently Asked<span className="bg-gradient-to-t from-[var(--primary-gold)] to-[var(--secondary-silver)] text-transparent bg-clip-text"> Questions</span>
@@ -448,11 +449,14 @@ export default function FAQ() {
         </div>
 
         <div className="text-center">
-          <button
-            className="px-8 py-4 text-white font-semibold rounded-lg text-lg hover:opacity-90 transition-opacity duration-300 bg-gradient-to-t from-[var(--primary-gold)] to-[var(--secondary-silver)]"
-          >
-            Start Your Transformation With Expert Care
-          </button>
+           <button onClick={() => document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })}
+              className="bg-gradient-to-t from-[var(--primary-gold)] to-[var(--secondary-silver)] text-white px-8 py-4 rounded-full font-semibold text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 hover:opacity-95 group relative overflow-hidden"
+            >
+              <span className="relative z-10 flex items-center justify-center gap-2">
+                Start Your Transformation With Expert Care
+              <ArrowRight className="w-5 lg:w-6 h-5 lg:h-6 group-hover:translate-x-2 transition-transform duration-300" />
+              </span>
+            </button>
         </div>
       </div>
     </div>
