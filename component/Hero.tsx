@@ -82,7 +82,7 @@ import { Phone, ArrowRight, Sparkles, Award, Users, Shield } from 'lucide-react'
 
 export default function SwakaayaHeroStats() {
   return (
-    <div className="min-h-screen bg-gray-900" style={{'--primary-gold': '#d4ad5f', '--secondary-silver': '#dcdcdc'}}>
+    <div className="min-h-screen bg-gray-900">
       {/* Hero Section with Background Image */}
       <section className="relative overflow-hidden min-h-screen">
         {/* Background Image with Overlay */}
@@ -108,8 +108,8 @@ export default function SwakaayaHeroStats() {
             <div className="max-w-3xl space-y-6 lg:space-y-8 animate-fade-in-up">
               {/* Badge */}
               <div className="inline-flex items-center gap-2 px-4 py-2 mb-2 rounded-full backdrop-blur-md animate-shimmer-border" style={{background: 'linear-gradient(to right, rgba(212, 173, 95, 0.2), rgba(212, 173, 95, 0.2))', border: '1px solid rgba(212, 173, 95, 0.4)'}}>
-                <Sparkles className="w-4 h-4 animate-spin-slow" style={{color: '#d4ad5f'}} />
-                <span className="font-semibold text-sm" style={{color: '#d4ad5f'}}>Science-Backed Results</span>
+                <Sparkles className="w-4 h-4 animate-spin-slow"  />
+                <span className="font-semibold text-sm" >Science-Backed Results</span>
               </div>
               
               {/* Headline */}
