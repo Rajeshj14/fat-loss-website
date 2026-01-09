@@ -44,12 +44,12 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="bg-white rounded-2xl p-8 shadow-xl w-full">
+    <div id='contact' className="bg-white rounded-2xl p-8 shadow-xl w-full">
       <form onSubmit={handleSubmit} className="space-y-6">
 
         {/* Name */}
-        <div>
-          <label className="block text-sm font-semibold text-gray-700 mb-2">
+        <div className='max-sm:mb-3'>
+          <label className="block text-sm font-semibold text-gray-700 mb-2 max-sm:mb-1">
             Full Name *
           </label>
           <input
@@ -58,14 +58,14 @@ const ContactForm = () => {
             value={formData.name}
             onChange={handleChange}
             required
-            className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-green-500 focus:ring-2 focus:ring-green-200 outline-none transition-all"
+            className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-[#d4ad5f] focus:ring-2 focus:ring-[#d4ad5f] outline-none transition-all"
             placeholder="John Doe"
           />
         </div>
 
         {/* Email */}
-        <div>
-          <label className="block text-sm font-semibold text-gray-700 mb-2">
+        <div className='max-sm:mb-3'>
+          <label className="block text-sm font-semibold text-gray-700 mb-2 max-sm:mb-1">
             Email Address *
           </label>
           <input
@@ -74,14 +74,14 @@ const ContactForm = () => {
             value={formData.email}
             onChange={handleChange}
             required
-            className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition-all"
+            className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-[#d4ad5f] focus:ring-2 focus:ring-[#d4ad5f] outline-none transition-all"
             placeholder="john@example.com"
           />
         </div>
 
         {/* Phone */}
-        <div>
-          <label className="block text-sm font-semibold text-gray-700 mb-2">
+        <div className='max-sm:mb-3'>
+          <label className="block text-sm font-semibold text-gray-700 mb-2 max-sm:mb-1">
             Phone Number *
           </label>
           <input
@@ -90,14 +90,14 @@ const ContactForm = () => {
             value={formData.phone}
             onChange={handleChange}
             required
-            className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-green-500 focus:ring-2 focus:ring-green-200 outline-none transition-all"
+            className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-[#d4ad5f] focus:ring-2 focus:ring-[#d4ad5f] outline-none transition-all"
             placeholder="+91 98765 43210"
           />
         </div>
 
         {/* Message */}
-        <div>
-          <label className="block text-sm font-semibold text-gray-700 mb-2">
+        <div className='max-sm:mb-2'>
+          <label className="block text-sm font-semibold text-gray-700 mb-2 max-sm:mb-1">
             Your Message *
           </label>
           <textarea
@@ -106,7 +106,7 @@ const ContactForm = () => {
             onChange={handleChange}
             required
             rows={4}
-            className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none resize-none transition-all"
+            className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-[#d4ad5f] focus:ring-2 focus:ring-[#d4ad5f] outline-none resize-none transition-all"
             placeholder="Tell us about your goals..."
           />
         </div>

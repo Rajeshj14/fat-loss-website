@@ -30,10 +30,6 @@ export default function Home() {
       <FAQ />
       <Commonmap />
       <Footer />
-
-      
-      
-      
     </div>
   );
 }

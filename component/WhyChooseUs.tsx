@@ -119,12 +119,12 @@ export default function DoctorProfile() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-100 py-20 px-4 overflow-hidden">
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-100 max-sm:py-5 py-20 px-4 overflow-hidden">
       <div className="max-w-7xl mx-auto">
         {/* Heading with decorative elements */}
-        <div className={`text-center mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-10'}`}>
-          <h1 className="text-4xl md:text-5xl font-bold mb-4" style={{ color: '#d4ad5f' }}>
-            Meet the Expert
+        <div className={`text-center max-sm:mb-3 mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-10'}`}>
+          <h1 className="text-4xl md:text-4xl font-bold max-sm:mb-2 mb-4">
+            Meet the <span className="bg-gradient-to-t from-[var(--primary-gold)] to-[var(--secondary-silver)] text-transparent bg-clip-text">Expert</span>
           </h1>
           <h2 className="text-2xl md:text-3xl font-semibold text-gray-800">
             Dr. Neha Thukral: Leading the Way in Scientific Weight Loss
@@ -132,7 +132,7 @@ export default function DoctorProfile() {
         </div>
 
         {/* Main Content - Swapped order */}
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <div className="grid lg:grid-cols-2 gap-16 max-sm:gap-10 items-center">
           {/* Content Section - Now on LEFT */}
           <div className={`space-y-8 transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
             <div className="space-y-6">
@@ -156,8 +156,8 @@ export default function DoctorProfile() {
             </div>
 
             {/* Enhanced CTA Section */}
-            <div className="pt-8">
-              <button
+            <div className="pt-8 max-sm:pt-0">
+              <button onClick={() => document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })}
                 className="group relative px-10 py-5 text-white font-bold rounded-xl text-lg overflow-hidden transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
                 style={{ backgroundColor: '#d4ad5f' }}
               >

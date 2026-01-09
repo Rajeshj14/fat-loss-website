@@ -395,13 +395,13 @@ export default function FAQ() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-100 py-16 px-4">
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-100 max-sm:py-6 py-16 px-4">
       <div className="max-w-6xl mx-auto">
-        <h1 className="text-4xl md:text-5xl font-bold text-center mb-12" style={{ color: '#d4ad5f' }}>
-          Frequently Asked Questions
+        <h1 className="text-2xl md:text-4xl font-bold text-center max-sm:mb-4 mb-12">
+          Frequently Asked<span className="bg-gradient-to-t from-[var(--primary-gold)] to-[var(--secondary-silver)] text-transparent bg-clip-text"> Questions</span>
         </h1>
 
-        <div className="grid md:grid-cols-2 gap-6 mb-12">
+        <div className="grid md:grid-cols-2 gap-6 max-sm:gap-2 max-sm:mb-4 mb-12">
           {faqs.map((faq, index) => (
             <div
               key={index}
@@ -449,8 +449,7 @@ export default function FAQ() {
 
         <div className="text-center">
           <button
-            className="px-8 py-4 text-white font-semibold rounded-lg text-lg hover:opacity-90 transition-opacity"
-            style={{ backgroundColor: '#d4ad5f' }}
+            className="px-8 py-4 text-white font-semibold rounded-lg text-lg hover:opacity-90 transition-opacity duration-300 bg-gradient-to-t from-[var(--primary-gold)] to-[var(--secondary-silver)]"
           >
             Start Your Transformation With Expert Care
           </button>

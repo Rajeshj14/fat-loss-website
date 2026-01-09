@@ -1,80 +1,3 @@
-// 'use client'
-// import { ArrowRight, Phone } from 'lucide-react';
-
-// const CTA = () => {
-//   const scrollToSection = (href: string) => {
-//     const element = document.querySelector(href);
-//     if (element) {
-//       element.scrollIntoView({ behavior: 'smooth' });
-//     }
-//   };
-
-//   return (
-//     <section className="py-20 bg-gradient-to-br from-green-500 via-blue-500 to-green-600 relative overflow-hidden">
-//       <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4xIj48cGF0aCBkPSJNMzYgMzBoLTZ2LTZoNnYtem0wIDZoLTZ2Nmg2di02eiIvPjwvZz48L2c+PC9zdmc+')] opacity-20"></div>
-
-//       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-//         <div className="text-center">
-//           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6">
-//             Start Your Fat Loss Journey Today
-//           </h2>
-//           <p className="text-lg sm:text-xl text-white/90 mb-10 max-w-3xl mx-auto">
-//             Don't wait another day to transform your life. Join thousands of satisfied
-//             clients who achieved their dream body with our proven programs.
-//           </p>
-
-//           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-//             <button
-//               onClick={() => scrollToSection('#contact')}
-//               className="group bg-white text-[#d4ad5f] px-8 py-4 rounded-full font-semibold hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 flex items-center gap-2"
-//             >
-//               Book Your Free Consultation
-//               <ArrowRight className="group-hover:translate-x-1 transition-transform" size={20} />
-//             </button>
-
-//             <button className="group bg-transparent text-white px-8 py-4 rounded-full font-semibold border-2 border-white hover:bg-white hover:text-green-600 transition-all duration-300 flex items-center gap-2">
-//               <Phone size={20} />
-//               Call: +1 (555) 123-4567
-//             </button>
-//           </div>
-
-//           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
-//             <div className="text-center">
-//               <div className="text-4xl md:text-5xl font-bold text-white mb-2">5000+</div>
-//               <div className="text-white/80">Transformations</div>
-//             </div>
-
-//             <div className="text-center">
-//               <div className="text-4xl md:text-5xl font-bold text-white mb-2">98%</div>
-//               <div className="text-white/80">Success Rate</div>
-//             </div>
-
-//             <div className="text-center">
-//               <div className="text-4xl md:text-5xl font-bold text-white mb-2">15+</div>
-//               <div className="text-white/80">Years Experience</div>
-//             </div>
-
-//             <div className="text-center">
-//               <div className="text-4xl md:text-5xl font-bold text-white mb-2">50+</div>
-//               <div className="text-white/80">Expert Team</div>
-//             </div>
-//           </div>
-
-//           <div className="mt-12 bg-white/10 backdrop-blur-sm rounded-2xl p-6 max-w-2xl mx-auto">
-//             <p className="text-white/90 text-sm">
-//               <span className="font-semibold">Limited Time Offer:</span> Get 20% off on
-//               all programs when you book this month. Transform your body with expert
-//               guidance at an unbeatable price!
-//             </p>
-//           </div>
-//         </div>
-//       </div>
-//     </section>
-//   );
-// };
-
-// export default CTA;
-
 'use client'
 import { useState, MouseEvent, TouchEvent } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
@@ -136,13 +59,13 @@ export default function BeforeAfterCarousel() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-100 flex items-center justify-center p-4">
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-100 flex items-center justify-center max-sm:pb-0 p-4">
       <div className="w-full max-w-5xl">
         
         {/* Header */}
-        <div className="text-center mb-8">
-          <h1 className="text-4xl md:text-5xl font-bold text-black mb-3">
-            Before & After Gallery
+        <div className="text-center max-sm:mb-2 mb-8">
+          <h1 className="text-2xl md:text-4xl font-bold text-black max-sm:mb-0 mb-3">
+            Before & <span className="bg-gradient-to-t from-[var(--primary-gold)] to-[var(--secondary-silver)] text-transparent bg-clip-text">After Gallery</span>
           </h1>
           <p className="text-black text-lg">
             Swipe through our amazing transformations

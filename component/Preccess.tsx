@@ -192,18 +192,18 @@ export default function SwakayaaFeatures() {
   ];
 
   return (
-    <div className="min-h-screen py-20 px-4 bg-gradient-to-br from-gray-50 via-white to-gray-100">
+    <div className="min-h-screen py-20 max-sm:py-8 px-4 bg-gradient-to-br from-gray-50 via-white to-gray-100">
       <div className="max-w-7xl mx-auto">
         {/* Heading Section */}
-        <div className={`text-center mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-10'}`}>
-          <h1 className="text-4xl md:text-5xl font-bold mb-4" style={{ color: '#d4ad5f' }}>
-            What Sets Swakaaya Apart
+        <div className={`text-center max-sm:mb-4 mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-10'}`}>
+          <h1 className="text-4xl md:text-5xl font-bold max-sm:mb-3 mb-4">
+            What Sets<span className="bg-gradient-to-t from-[var(--primary-gold)] to-[var(--secondary-silver)] text-transparent bg-clip-text"> Swakaaya Apart</span>
           </h1>
-          <div className="w-24 h-1 mx-auto rounded-full" style={{ backgroundColor: '#d4ad5f' }}></div>
+          <div className="w-24 h-1 mx-auto rounded-full bg-gradient-to-r from-[var(--primary-gold)] to-[var(--secondary-silver)]"></div>
         </div>
 
         {/* Features Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16 max-sm:gap-4 max-sm:mb-4">
           {features.map((feature, index) => (
             <div
               key={index}
@@ -212,7 +212,7 @@ export default function SwakayaaFeatures() {
               }`}
               style={{ transitionDelay: `${300 + index * 150}ms` }}
             >
-              <div className="relative h-full p-8 rounded-2xl border-2 transition-all duration-500 hover:shadow-2xl hover:-translate-y-2"
+              <div className="relative max-sm:mb-0 h-full p-8 rounded-2xl border-2 transition-all duration-500 hover:shadow-2xl hover:-translate-y-2"
                 style={{ 
                   borderColor: '#dcdcdc',
                   backgroundColor: 'white'
@@ -222,18 +222,17 @@ export default function SwakayaaFeatures() {
                 <div className="relative mb-6">
                   <div 
                     className="absolute inset-0 blur-xl opacity-20 rounded-full"
-                    style={{ backgroundColor: '#d4ad5f' }}
+                    
                   ></div>
                   <div 
-                    className="relative w-20 h-20 rounded-full flex items-center justify-center text-white transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6"
-                    style={{ backgroundColor: '#d4ad5f' }}
+                    className="max-sm:mb-0 relative w-20 h-20 rounded-full flex items-center justify-center text-white transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6 bg-gradient-to-t from-[var(--primary-gold)] to-[var(--secondary-silver)]"
                   >
                     {feature.icon}
                   </div>
                 </div>
 
                 {/* Content */}
-                <h3 className="text-xl font-bold text-gray-900 mb-4">
+                <h3 className="text-xl font-bold text-gray-900 max-sm:mb-1 mb-4">
                   {feature.title}
                 </h3>
                 <p className="text-gray-600 leading-relaxed">
@@ -242,8 +241,8 @@ export default function SwakayaaFeatures() {
 
                 {/* Bottom accent line */}
                 <div 
-                  className="absolute bottom-0 left-0 h-1 w-0 group-hover:w-full transition-all duration-500 rounded-b-2xl"
-                  style={{ backgroundColor: '#d4ad5f' }}
+                  className="absolute bottom-0 left-0 h-1 w-0 group-hover:w-full transition-all duration-500 rounded-b-2xl bg-gradient-to-r from-[var(--primary-gold)] to-[var(--secondary-silver)]"
+                  
                 ></div>
               </div>
             </div>
@@ -252,9 +251,9 @@ export default function SwakayaaFeatures() {
 
         {/* CTA Section */}
         <div className={`text-center transition-all duration-1000 delay-1000 ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}>
-          <button
-            className="group relative px-12 py-5 text-white font-bold rounded-xl text-lg overflow-hidden transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
-            style={{ backgroundColor: '#d4ad5f' }}
+          <button onClick={() => document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })}
+            className="group relative px-12 py-5 text-white font-bold rounded-xl text-lg overflow-hidden transition-all duration-300 transform hover:scale-105 hover:shadow-2xl bg-gradient-to-t from-[var(--primary-gold)] to-[var(--secondary-silver)]"
+            
           >
             <span className="relative z-10 flex items-center justify-center gap-3">
               Schedule Your Appointment

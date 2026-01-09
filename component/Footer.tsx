@@ -57,7 +57,7 @@ const Footer = () => {
             <ul className="space-y-3">
               <li>
                 <button
-                  onClick={() => scrollToSection('#home')}
+                  onClick={() => scrollToSection('/')}
                   className="text-gray-400 hover:text-[var(--primary-gold)] transition-colors"
                 >
                   Home
@@ -140,8 +140,8 @@ const Footer = () => {
 
             <div className="mt-6">
               <button
-                onClick={() => scrollToSection('#contact')}
-                className="bg-gradient-to-r from-[var(--primary-gold)] to-[var(--secondary-silver)] text-white px-6 py-3 rounded-lg font-semibold hover:shadow-lg transition-all duration-300 transform hover:-translate-y-0.5"
+                onClick={() => document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })}
+                className="bg-gradient-to-t from-[var(--primary-gold)] to-[var(--secondary-silver)] text-white px-6 py-3 rounded-lg font-semibold hover:shadow-lg transition-all duration-300 transform hover:-translate-y-0.5"
               >
                 Book Consultation
               </button>

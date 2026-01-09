@@ -8,7 +8,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const navLinks = [
-    { name: 'Home', href: '#home' },
+    { name: 'Home', href: '/' },
     { name: 'About', href: '#about' },
     { name: 'Programs', href: '#programs' },
     { name: 'Why Us', href: '#why-us' },
@@ -86,7 +86,7 @@ const Navbar = () => {
             ))}
             <button
               onClick={() => scrollToSection('#contact')}
-              className="w-full text-center bg-gradient-to-r from-green-500 to-blue-500 text-white px-6 py-2 rounded-full hover:shadow-lg transition-all duration-300 mt-2"
+              className="w-full text-center bg-gradient-to-t from-[var(--primary-gold)] to-[var(--secondary-silver)] text-white px-6 py-2 rounded-full hover:shadow-lg transition-all duration-300 mt-2"
             >
               Book Consultation
             </button>

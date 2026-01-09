@@ -141,7 +141,7 @@ export default function TreatmentSolutions() {
   ];
 
   return (
-    <section className="relative py-16 lg:py-24 bg-gradient-to-br from-gray-50 via-white to-gray-100 overflow-hidden">
+    <section className="relative max-sm:py-5 py-16 lg:py-24 bg-gradient-to-br from-gray-50 via-white to-gray-100 overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style={{backgroundImage: 'radial-gradient(circle, #d4ad5f 1px, transparent 1px)', backgroundSize: '40px 40px'}}></div>
@@ -153,17 +153,17 @@ export default function TreatmentSolutions() {
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center mb-12 lg:mb-16 animate-fade-in-up">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold mb-4" style={{color: '#d4ad5f'}}>
-            Targeted Solutions for Every Body Goal
+        <div className="text-center max-sm:mb-3 mb-12 lg:mb-16 animate-fade-in-up">
+          <h2 className="text-2xl sm:text-4xl lg:text-4xl font-extrabold max-sm:mb-0 mb-4">
+            Targeted Solutions for <span className="bg-gradient-to-t from-[var(--primary-gold)] to-[var(--secondary-silver)] text-transparent bg-clip-text">Every Body Goal</span>
           </h2>
-          <p className="text-lg sm:text-xl max-w-3xl mx-auto" style={{color: '#dcdcdc'}}>
+          <p className="text-lg sm:text-xl max-w-3xl mx-auto">
             Core Specializations
           </p>
         </div>
 
         {/* Treatment Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 mb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 mb-12 max-sm:gap-3 max-sm:mb-3">
           {treatments.map((treatment, index) => {
             const Icon = treatment.icon;
             return (
@@ -213,12 +213,12 @@ export default function TreatmentSolutions() {
 
         {/* CTA Button */}
         <div className="text-center animate-fade-in-up" style={{animationDelay: '0.5s'}}>
-          <button className="group relative px-8 sm:px-10 lg:px-12 py-4 sm:py-5 text-gray-900 text-lg sm:text-xl font-extrabold rounded-2xl overflow-hidden transition-all duration-300 hover:scale-105 animate-shimmer-bg" style={{background: 'linear-gradient(to right, #d4ad5f, #e0c080, #d4ad5f)', backgroundSize: '200% auto', boxShadow: '0 20px 60px rgba(212, 173, 95, 0.5)'}}>
-            <span className="relative z-10 flex items-center justify-center gap-3">
+          <button onClick={() => document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })} className="group relative px-8 sm:px-10 lg:px-12 py-4 sm:py-5 text-gray-900 text-lg sm:text-xl font-extrabold rounded-2xl overflow-hidden transition-all duration-300 hover:scale-105 animate-shimmer-bg bg-gradient-to-t from-[var(--primary-gold)] to-[var(--secondary-silver)]">
+            <span className="relative z-10 flex items-center justify-center gap-3 text-white">
               Find Your Personalized Treatment Plan
               <ArrowRight className="w-5 lg:w-6 h-5 lg:h-6 group-hover:translate-x-2 transition-transform duration-300" />
             </span>
-            <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300" style={{background: 'linear-gradient(to right, #e0c080, #d4ad5f, #e0c080)'}}></div>
+           
           </button>
         </div>
       </div>

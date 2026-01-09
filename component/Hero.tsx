@@ -102,26 +102,52 @@ export default function SwakaayaHeroStats() {
           </div>
         </div>
         
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:pt-30 min-h-screen flex items-center">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-30 pb-18 sm:py-16 lg:pt-30 min-h-screen flex items-center">
           <div className="w-full">
             {/* Main Content */}
             <div className="max-w-3xl space-y-6 lg:space-y-8 animate-fade-in-up">
               {/* Badge */}
               <div className="inline-flex items-center gap-2 px-4 py-2 mb-2 rounded-full backdrop-blur-md animate-shimmer-border" style={{background: 'linear-gradient(to right, rgba(212, 173, 95, 0.2), rgba(212, 173, 95, 0.2))', border: '1px solid rgba(212, 173, 95, 0.4)'}}>
-                <Sparkles className="w-4 h-4 animate-spin-slow"  />
-                <span className="font-semibold text-sm" >Science-Backed Results</span>
+                <Sparkles className="w-4 h-4 animate-spin-slow" style={{color: '#d4ad5f'}} />
+                <span className="font-semibold text-sm" style={{color: '#d4ad5f'}}>Science-Backed Results</span>
               </div>
               
               {/* Headline */}
-              <h1 className="text-4xl sm:text-5xl lg:text-5xl xl:text-7xl font-extrabold leading-tight flex flex-col mb-4">
-                <div className="text-white drop-shadow-lg">Get the Body You </div>
-                
+              {/* <h1 className="text-4xl sm:text-5xl lg:text-5xl xl:text-7xl font-extrabold leading-tight flex flex-col mb-4">
+                <div className="text-white drop-shadow-lg line-height-1">Get the Body You </div>
                 <div className="text-transparent bg-clip-text animate-gradient drop-shadow-lg" style={{backgroundImage: 'linear-gradient(to right, #d4ad5f, #e0c080, #d4ad5f)', backgroundSize: '200% 200%'}}>
                   Deserve
                 </div>
                 <div className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl drop-shadow-lg pb-2" style={{color: '#dcdcdc'}}>Science-Backed Weight Loss</div>
                 <div className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl drop-shadow-lg" style={{color: '#d4ad5f'}}>in Gurgaon</div>
+              </h1> */}
+              <h1 className="flex flex-col gap-2 sm:gap-3 lg:gap-0 mb-0 max-sm:gap-0">
+                  <span className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-extrabold text-white drop-shadow-lg leading-tight">
+                    Get the Body You
+                  </span>
+                  <span
+                    className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-extrabold text-transparent bg-clip-text drop-shadow-lg animate-gradient leading-tight"
+                    style={{
+                      backgroundImage: 'linear-gradient(to right, #d4ad5f, #e0c080, #d4ad5f)',
+                      backgroundSize: '200% 200%',
+                    }}
+                  >
+                    Deserve
+                  </span>
+                  <span
+                    className="text-2xl sm:text-4xl lg:text-4xl xl:text-4xl font-semibold drop-shadow-lg leading-snug"
+                    style={{ color: '#dcdcdc' }}
+                  >
+                    Science-Backed Weight Loss
+                  </span>
+                  <span
+                    className="text-2xl sm:text-3xl lg:text-3xl xl:text-3xl font-semibold drop-shadow-lg leading-snug"
+                    style={{ color: '#d4ad5f' }}
+                  >
+                    in Gurgaon
+                  </span>
               </h1>
+
               
               {/* Sub-headline */}
               <p className="text-base sm:text-lg lg:text-xl leading-relaxed max-w-2xl drop-shadow-md mb-1" style={{color: '#dcdcdc'}}>
@@ -131,7 +157,7 @@ export default function SwakaayaHeroStats() {
               
               {/* CTAs */}
               <div className="flex flex-col sm:flex-row gap-4 items-stretch sm:items-center pt-2 lg:pt-4 mb-2">
-                <button className="group relative w-full sm:w-auto px-6 lg:px-8 py-4 lg:py-5 text-gray-900 text-base lg:text-lg font-bold rounded-2xl overflow-hidden transition-all duration-300 hover:scale-105 animate-pulse-glow" style={{background: 'linear-gradient(to right, #d4ad5f, #e0c080)', boxShadow: '0 20px 60px rgba(212, 173, 95, 0.6)'}}>
+                <button onClick={() => document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })} className="group relative w-full sm:w-auto px-6 lg:px-8 py-4 lg:py-5 text-gray-900 text-base lg:text-lg font-bold rounded-2xl overflow-hidden transition-all duration-300 hover:scale-105 animate-pulse-glow" style={{background: 'linear-gradient(to right, #d4ad5f, #e0c080)', boxShadow: '0 20px 60px rgba(212, 173, 95, 0.6)'}}>
                   <span className="relative z-10 flex items-center justify-center gap-2">
                     Book Your Appointment
                     <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform duration-300" />
@@ -160,83 +186,143 @@ export default function SwakaayaHeroStats() {
       </section>
 
       {/* Stats Section */}
-      <section className="relative py-10 lg:py-12 bg-gray-900 overflow-hidden">
-        {/* Background Pattern */}
-        <div className="absolute inset-0 opacity-5">
-          <div className="absolute inset-0" style={{backgroundImage: 'radial-gradient(circle, #d4ad5f 1px, transparent 1px)', backgroundSize: '40px 40px'}}></div>
-        </div>
+    <section className="relative max-sm:py-6 py-10 lg:py-1 bg-gray-900 overflow-hidden">
+  {/* Background Pattern */}
+  <div className="absolute inset-0 opacity-5">
+    <div 
+      className="absolute inset-0" 
+      style={{
+        backgroundImage: 'radial-gradient(circle, #d4ad5f 1px, transparent 1px)', 
+        backgroundSize: '40px 40px'
+      }}
+    ></div>
+  </div>
 
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 mb-12 lg:mb-4">
-            {/* Stat 1 */}
-            <div className="group text-center animate-fade-in-up" style={{animationDelay: '0.1s'}}>
-              <div className="relative inline-block">
-                <div className="absolute inset-0 rounded-3xl blur-xl opacity-50 group-hover:opacity-75 transition-opacity" style={{background: 'linear-gradient(to bottom right, #d4ad5f, #e0c080)'}}></div>
-                <div className="relative bg-gradient-to-br from-gray-800 to-gray-900 p-6 lg:p-8 rounded-3xl transition-all duration-300 group-hover:scale-110 group-hover:rotate-3" style={{border: '2px solid rgba(212, 173, 95, 0.3)'}}>
-                  <Users className="w-8 lg:w-10 h-8 lg:h-10 mx-auto mb-3" style={{color: '#d4ad5f'}} />
-                  <div className="text-4xl lg:text-5xl font-extrabold text-transparent bg-clip-text mb-2" style={{backgroundImage: 'linear-gradient(to right, #d4ad5f, #e0c080)'}}>
-                    5,000+
-                  </div>
-                  <p className="text-sm lg:text-base font-semibold" style={{color: '#dcdcdc'}}>Happy Transformations</p>
-                </div>
-              </div>
+  <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="grid grid-cols-1 max-sm:grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 mb-8 max-sm:gap-2 lg:mb-6 max-sm:mb-4">
+      {/* Stat 1 */}
+      <div className="group text-center animate-fade-in-up" style={{animationDelay: '0.1s'}}>
+        <div className="relative inline-block w-full">
+          <div 
+            className="absolute inset-0 rounded-3xl blur-xl opacity-50 group-hover:opacity-75 transition-opacity" 
+            style={{background: 'linear-gradient(to bottom right, #d4ad5f, #e0c080)'}}
+          ></div>
+          <div 
+            className="relative bg-gradient-to-br from-gray-800 to-gray-900 p-6 rounded-3xl transition-all duration-300 group-hover:scale-[1.02]"
+            style={{border: '1px solid rgba(212, 173, 95, 0.3)'}}
+          >
+            <Users className="w-8 h-8 mx-auto mb-3" style={{color: '#d4ad5f'}} />
+            <div 
+              className="text-3xl lg:text-4xl font-extrabold text-transparent bg-clip-text mb-2"
+              style={{backgroundImage: 'linear-gradient(to right, #d4ad5f, #e0c080)'}}
+            >
+              5,000+
             </div>
-            
-            {/* Stat 2 */}
-            <div className="group text-center animate-fade-in-up" style={{animationDelay: '0.2s'}}>
-              <div className="relative inline-block">
-                <div className="absolute inset-0 rounded-3xl blur-xl opacity-50 group-hover:opacity-75 transition-opacity" style={{background: 'linear-gradient(to bottom right, #d4ad5f, #e0c080)'}}></div>
-                <div className="relative bg-gradient-to-br from-gray-800 to-gray-900 p-6 lg:p-8 rounded-3xl transition-all duration-300 group-hover:scale-110 group-hover:rotate-3" style={{border: '2px solid rgba(212, 173, 95, 0.3)'}}>
-                  <Award className="w-8 lg:w-10 h-8 lg:h-10 mx-auto mb-3" style={{color: '#d4ad5f'}} />
-                  <div className="text-4xl lg:text-5xl font-extrabold text-transparent bg-clip-text mb-2" style={{backgroundImage: 'linear-gradient(to right, #d4ad5f, #e0c080)'}}>
-                    10+
-                  </div>
-                  <p className="text-sm lg:text-base font-semibold" style={{color: '#dcdcdc'}}>Years of Clinical Excellence</p>
-                </div>
-              </div>
-            </div>
-            
-            {/* Stat 3 */}
-            <div className="group text-center animate-fade-in-up" style={{animationDelay: '0.3s'}}>
-              <div className="relative inline-block">
-                <div className="absolute inset-0 rounded-3xl blur-xl opacity-50 group-hover:opacity-75 transition-opacity" style={{background: 'linear-gradient(to bottom right, #d4ad5f, #e0c080)'}}></div>
-                <div className="relative bg-gradient-to-br from-gray-800 to-gray-900 p-6 lg:p-8 rounded-3xl transition-all duration-300 group-hover:scale-110 group-hover:rotate-3" style={{border: '2px solid rgba(212, 173, 95, 0.3)'}}>
-                  <Sparkles className="w-8 lg:w-10 h-8 lg:h-10 mx-auto mb-3" style={{color: '#d4ad5f'}} />
-                  <div className="text-4xl lg:text-5xl font-extrabold text-transparent bg-clip-text mb-2" style={{backgroundImage: 'linear-gradient(to right, #d4ad5f, #e0c080)'}}>
-                    98%
-                  </div>
-                  <p className="text-sm lg:text-base font-semibold" style={{color: '#dcdcdc'}}>Client Satisfaction Rate</p>
-                </div>
-              </div>
-            </div>
-            
-            {/* Stat 4 */}
-            <div className="group text-center animate-fade-in-up" style={{animationDelay: '0.4s'}}>
-              <div className="relative inline-block">
-                <div className="absolute inset-0 rounded-3xl blur-xl opacity-50 group-hover:opacity-75 transition-opacity" style={{background: 'linear-gradient(to bottom right, #d4ad5f, #e0c080)'}}></div>
-                <div className="relative bg-gradient-to-br from-gray-800 to-gray-900 p-6 lg:p-8 rounded-3xl transition-all duration-300 group-hover:scale-110 group-hover:rotate-3" style={{border: '2px solid rgba(212, 173, 95, 0.3)'}}>
-                  <Shield className="w-8 lg:w-10 h-8 lg:h-10 mx-auto mb-3" style={{color: '#d4ad5f'}} />
-                  <div className="text-4xl lg:text-5xl font-extrabold text-transparent bg-clip-text mb-2" style={{backgroundImage: 'linear-gradient(to right, #d4ad5f, #e0c080)'}}>
-                    100%
-                  </div>
-                  <p className="text-sm lg:text-base font-semibold" style={{color: '#dcdcdc'}}>Safe & Non-Invasive Procedures</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          {/* Bottom CTA */}
-          <div className="text-center animate-fade-in-up" style={{animationDelay: '0.5s'}}>
-            <button className="group relative px-8 sm:px-10 lg:px-12 py-4 sm:py-5 lg:py-6 text-gray-900 text-lg sm:text-xl font-extrabold rounded-2xl overflow-hidden transition-all duration-300 hover:scale-110 animate-shimmer-bg" style={{background: 'linear-gradient(to right, #d4ad5f, #e0c080, #d4ad5f)', backgroundSize: '200% auto', boxShadow: '0 20px 60px rgba(212, 173, 95, 0.5)'}}>
-              <span className="relative z-10 flex items-center justify-center gap-3">
-                Start Your Weight Loss Journey Now
-                <ArrowRight className="w-5 lg:w-6 h-5 lg:h-6 group-hover:translate-x-2 transition-transform duration-300" />
-              </span>
-              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300" style={{background: 'linear-gradient(to right, #e0c080, #d4ad5f, #e0c080)'}}></div>
-            </button>
+            <p className="text-sm font-semibold" style={{color: '#dcdcdc'}}>
+              Happy Transformations
+            </p>
           </div>
         </div>
-      </section>
+      </div>
+      
+      {/* Stat 2 */}
+      <div className="group text-center animate-fade-in-up" style={{animationDelay: '0.2s'}}>
+        <div className="relative inline-block w-full">
+          <div 
+            className="absolute inset-0 rounded-3xl blur-xl opacity-50 group-hover:opacity-75 transition-opacity" 
+            style={{background: 'linear-gradient(to bottom right, #d4ad5f, #e0c080)'}}
+          ></div>
+          <div 
+            className="relative bg-gradient-to-br from-gray-800 to-gray-900 p-6 rounded-3xl transition-all duration-300 group-hover:scale-[1.02]"
+            style={{border: '1px solid rgba(212, 173, 95, 0.3)'}}
+          >
+            <Award className="w-8 h-8 mx-auto mb-3" style={{color: '#d4ad5f'}} />
+            <div 
+              className="text-3xl lg:text-4xl font-extrabold text-transparent bg-clip-text mb-2"
+              style={{backgroundImage: 'linear-gradient(to right, #d4ad5f, #e0c080)'}}
+            >
+              10+
+            </div>
+            <p className="text-sm font-semibold" style={{color: '#dcdcdc'}}>
+              Years of Clinical Excellence
+            </p>
+          </div>
+        </div>
+      </div>
+      
+      {/* Stat 3 */}
+      <div className="group text-center animate-fade-in-up" style={{animationDelay: '0.3s'}}>
+        <div className="relative inline-block w-full">
+          <div 
+            className="absolute inset-0 rounded-3xl blur-xl opacity-50 group-hover:opacity-75 transition-opacity" 
+            style={{background: 'linear-gradient(to bottom right, #d4ad5f, #e0c080)'}}
+          ></div>
+          <div 
+            className="relative bg-gradient-to-br from-gray-800 to-gray-900 p-6 rounded-3xl transition-all duration-300 group-hover:scale-[1.02]"
+            style={{border: '1px solid rgba(212, 173, 95, 0.3)'}}
+          >
+            <Sparkles className="w-8 h-8 mx-auto mb-3" style={{color: '#d4ad5f'}} />
+            <div 
+              className="text-3xl lg:text-4xl font-extrabold text-transparent bg-clip-text mb-2"
+              style={{backgroundImage: 'linear-gradient(to right, #d4ad5f, #e0c080)'}}
+            >
+              98%
+            </div>
+            <p className="text-sm font-semibold" style={{color: '#dcdcdc'}}>
+              Client Satisfaction Rate
+            </p>
+          </div>
+        </div>
+      </div>
+      
+      {/* Stat 4 */}
+      <div className="group text-center animate-fade-in-up" style={{animationDelay: '0.4s'}}>
+        <div className="relative inline-block w-full">
+          <div 
+            className="absolute inset-0 rounded-3xl blur-xl opacity-50 group-hover:opacity-75 transition-opacity" 
+            style={{background: 'linear-gradient(to bottom right, #d4ad5f, #e0c080)'}}
+          ></div>
+          <div 
+            className="relative bg-gradient-to-br from-gray-800 to-gray-900 p-6 rounded-3xl transition-all duration-300 group-hover:scale-[1.02]"
+            style={{border: '1px solid rgba(212, 173, 95, 0.3)'}}
+          >
+            <Shield className="w-8 h-8 mx-auto mb-3" style={{color: '#d4ad5f'}} />
+            <div 
+              className="text-3xl lg:text-4xl font-extrabold text-transparent bg-clip-text mb-2"
+              style={{backgroundImage: 'linear-gradient(to right, #d4ad5f, #e0c080)'}}
+            >
+              100%
+            </div>
+            <p className="text-sm font-semibold" style={{color: '#dcdcdc'}}>
+              Safe & Non-Invasive Procedures
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    {/* Bottom CTA - Made smaller */}
+    <div className="text-center animate-fade-in-up" style={{animationDelay: '0.5s'}}>
+      <button onClick={() => document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })}
+        className="group relative px-6 py-3 text-gray-900 text-base sm:text-lg font-semibold rounded-xl overflow-hidden transition-all duration-300 hover:scale-[1.02] animate-shimmer-bg"
+        style={{
+          background: 'linear-gradient(to right, #d4ad5f, #e0c080, #d4ad5f)',
+          backgroundSize: '200% auto',
+          boxShadow: '0 10px 40px rgba(212, 173, 95, 0.4)'
+        }}
+      >
+        <span className="relative z-10 flex items-center justify-center gap-2">
+          Start Your Weight Loss Journey Now
+          <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
+        </span>
+        <div 
+          className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+          style={{background: 'linear-gradient(to right, #e0c080, #d4ad5f, #e0c080)'}}
+        ></div>
+      </button>
+    </div>
+  </div>
+</section>
 
       <style jsx>{`
         @keyframes fade-in-up {

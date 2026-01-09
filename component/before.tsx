@@ -132,7 +132,7 @@ export default function VideoCarousel() {
       <div className="w-full max-w-7xl">
         <div className="text-center mb-8 max-sm:mb-3 md:mb-12">
           <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-black pt-3 max-sm:pt-0 mb-2 md:mb-3">
-            Real People &<span className="text-[var(--primary-gold)]"> Real Results.</span>
+            Real People &<span className="bg-gradient-to-t from-[var(--primary-gold)] to-[var(--secondary-silver)] text-transparent bg-clip-text"> Real Results.</span>
           </h1>
           <p className="text-gray-400 text-sm sm:text-base">
             {visibleCount === 1 ? '1 video on mobile' : 
@@ -180,7 +180,8 @@ export default function VideoCarousel() {
                             e.stopPropagation();
                             togglePlay(video.id);
                           }}
-                          className="bg-red-600 hover:bg-red-700 text-white rounded-full p-2 sm:p-3 transition-all hover:scale-110"
+                          
+                          className="bg-gradient-to-t from-[var(--primary-gold)] to-[var(--secondary-silver)] text-white rounded-full p-2 sm:p-3 transition-all hover:scale-110"
                         >
                           {playingVideos[video.id] ? (
                             <Pause className="w-4 h-4 sm:w-5 sm:h-5" />
@@ -225,7 +226,7 @@ export default function VideoCarousel() {
                         e.stopPropagation();
                         togglePlay(video.id);
                       }}
-                      className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#d4ad5f] rounded-full p-4 sm:p-6 transition-all hover:scale-110 opacity-100 sm:opacity-0 sm:hover:opacity-100"
+                      className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-gradient-to-t from-[var(--primary-gold)] to-[var(--secondary-silver)] rounded-full p-4 sm:p-6 transition-all hover:scale-110 opacity-100 sm:opacity-0 sm:hover:opacity-100"
                     >
                       <Play className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
                     </button>
@@ -238,14 +239,14 @@ export default function VideoCarousel() {
           {/* Navigation Arrows - Visible on all screens */}
           <button
             onClick={prevSet}
-            className="absolute left-0 sm:-left-12 top-1/2 -translate-y-1/2 bg-[#d4ad5f] text-white rounded-full p-3 sm:p-4 transition-all hover:scale-110 shadow-lg z-20"
+            className="absolute left-0 sm:-left-12 top-1/2 -translate-y-1/2 bg-gradient-to-t from-[var(--primary-gold)] to-[var(--secondary-silver)] text-white rounded-full p-3 sm:p-4 transition-all hover:scale-110 shadow-lg z-20"
           >
             <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6" />
           </button>
 
           <button
             onClick={nextSet}
-            className="absolute right-0 sm:-right-12 top-1/2 -translate-y-1/2 bg-[#d4ad5f] text-white rounded-full p-3 sm:p-4 transition-all hover:scale-110 shadow-lg z-20"
+            className="absolute right-0 sm:-right-12 top-1/2 -translate-y-1/2 bg-gradient-to-t from-[var(--primary-gold)] to-[var(--secondary-silver)] text-white rounded-full p-3 sm:p-4 transition-all hover:scale-110 shadow-lg z-20"
           >
             <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6" />
           </button>
