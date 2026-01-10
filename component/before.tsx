@@ -284,7 +284,7 @@
 
 "use client";
 
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef } from "react";
 import {
   Play,
   Pause,
@@ -298,12 +298,10 @@ import {
 
 export default function VideoCarousel() {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [playingVideos, setPlayingVideos] = useState<Record<number, boolean>>(
-    {}
-  );
-  const [mutedVideos, setMutedVideos] = useState<Record<number, boolean>>({});
-  const [fullscreenVideo, setFullscreenVideo] = useState<number | null>(null);
-  const videoRefs = useRef<Record<number, HTMLVideoElement | null>>({});
+  const [playingVideos, setPlayingVideos] = useState({});
+  const [mutedVideos, setMutedVideos] = useState({});
+  const [fullscreenVideo, setFullscreenVideo] = useState(null);
+  const videoRefs = useRef({});
 
   const videos = [
     { id: 1, videoUrl: "/WL-testimonial.mp4" },
@@ -331,7 +329,7 @@ export default function VideoCarousel() {
 
   const currentVideo = videos[currentIndex];
 
-  const togglePlay = (id: number) => {
+  const togglePlay = (id) => {
     const video = videoRefs.current[id];
     if (video) {
       if (video.paused) {
@@ -344,7 +342,7 @@ export default function VideoCarousel() {
     }
   };
 
-  const toggleMute = (id: number) => {
+  const toggleMute = (id) => {
     const video = videoRefs.current[id];
     if (video) {
       video.muted = !video.muted;
@@ -370,7 +368,7 @@ export default function VideoCarousel() {
     }
   };
 
-  const toggleFullscreen = (id: number | null) => {
+  const toggleFullscreen = (id) => {
     if (fullscreenVideo === id) {
       setFullscreenVideo(null);
     } else {
@@ -378,7 +376,7 @@ export default function VideoCarousel() {
     }
   };
 
-  const goToVideo = (index: number) => {
+  const goToVideo = (index) => {
     pauseCurrentVideo();
     setCurrentIndex(index);
   };
@@ -425,13 +423,13 @@ export default function VideoCarousel() {
                   className="w-full h-[350px] sm:h-[500px] md:h-[550px] object-cover"
                   loop
                   muted={mutedVideos[currentVideo.id]}
-                  onClick={() => togglePlay(currentVideo.id)}
+                  playsInline
                   src={currentVideo.videoUrl}
                 />
 
-                {/* Video Controls Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300">
-                  <div className="absolute bottom-4 sm:bottom-6 left-0 right-0 px-4 sm:px-6">
+                {/* Video Controls Overlay - Always visible on mobile, hover on desktop */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-100 sm:opacity-0 sm:hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                  <div className="absolute bottom-4 sm:bottom-6 left-0 right-0 px-4 sm:px-6 pointer-events-auto">
                     <div className="flex items-center justify-center gap-3 sm:gap-4">
                       {/* Play/Pause */}
                       <button
@@ -477,14 +475,14 @@ export default function VideoCarousel() {
                   </div>
                 </div>
 
-                {/* Center Play Button (when paused) */}
+                {/* Center Play Button (when paused) - Only on desktop */}
                 {!playingVideos[currentVideo.id] && (
                   <button
                     onClick={(e) => {
                       e.stopPropagation();
                       togglePlay(currentVideo.id);
                     }}
-                    className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-gradient-to-t from-yellow-600 to-gray-400 rounded-full p-5 sm:p-6 transition-all hover:scale-110 shadow-2xl"
+                    className="hidden sm:block absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-gradient-to-t from-yellow-600 to-gray-400 rounded-full p-5 sm:p-6 transition-all hover:scale-110 shadow-2xl pointer-events-auto"
                   >
                     <Play className="w-8 h-8 sm:w-10 sm:h-10 text-white" />
                   </button>
@@ -549,9 +547,7 @@ export default function VideoCarousel() {
             <div className="w-full max-w-6xl">
               <video
                 ref={(el) => {
-                  videoRefs.current[
-                    `fs-${fullscreenVideo}` as unknown as number
-                  ] = el;
+                  videoRefs.current[`fs-${fullscreenVideo}`] = el;
                 }}
                 className="w-full rounded-lg"
                 src={videos.find((v) => v.id === fullscreenVideo)?.videoUrl}
