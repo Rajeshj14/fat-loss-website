@@ -1,6 +1,7 @@
 'use client'
 
 import { Facebook, Instagram, Linkedin, Mail, Phone, Twitter, MapPin } from 'lucide-react';
+import Image from 'next/image';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -18,9 +19,16 @@ const Footer = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10 max-sm:gap-6 max-sm:mb-5 mb-8">
           {/* Company Info */}
           <div>
-            <h3 className="text-2xl font-bold bg-gradient-to-r from-[var(--primary-gold)] to-[var(--secondary-silver)] bg-clip-text text-transparent mb-4 max-sm:mb-3">
-              FitLife Agency
-            </h3>
+            <div className="relative w-62 h-32 md:w-65 md:h-35 transition-transform duration-300 hover:scale-105 cursor-pointer">
+              <Image
+                src="/logo.png"
+                alt="Swetika Skin Clinic"
+                fill
+                className="object-contain"
+                priority
+                onClick={() => scrollToSection('/')}
+              />
+            </div>
             <p className="text-gray-400 mb-6 max-sm:mb-3 leading-relaxed">
               Transform your body and life with our science-backed, doctor-led fat loss
               programs. Your journey to a healthier you starts here.
@@ -149,7 +157,7 @@ const Footer = () => {
             <h4 className="text-lg font-bold mb-4">Our Location</h4>
             <div className="w-full h-64 rounded-xl overflow-hidden border border-gray-800 shadow-lg">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3024.2219901290355!2d-74.00369368400567!3d40.71312937933185!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a316c2b4f5d%3A0x8b934de5cae6f7a!2s123%20Fitness%20St%2C%20New%20York%2C%20NY%2010001%2C%20USA!5e0!3m2!1sen!2sin!4v1642000000000!5m2!1sen!2sin"
+                src="https://www.google.com/maps/embed?pb=!1m24!1m8!1m3!1d13502251.350223595!2d78.299911!3d20.850662!3m2!1i1024!2i768!4f13.1!4m13!3e0!4m5!1s0x3a5265b06c978075%3A0x8fb91ae118cc81c4!2s103%2F1%2F64%2C%20Siruvallur%2C%20Perambur%2C%20Chennai%2C%20Tamil%20Nadu%20600011!3m2!1d13.1137339!2d80.242282!4m5!1s0x390d199f4d41667b%3A0xe692ea03f2cf3a27!2sSwakaaya%20Wellness%20Clinic%2C%20Plot%20no%2042%2C%20Ground%20floor%2C%20next%20to%20Hotel%20palm%20bliss%2C%20Block%20C%2C%20Uday%20Nagar%2C%20Sector%2045%2C%20Gurugram%2C%20Haryana%20122003!3m2!1d28.4382454!2d77.0659864!5e1!3m2!1sen!2sin!4v1768028331419!5m2!1sen!2sin" 
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
@@ -157,7 +165,7 @@ const Footer = () => {
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
                 title="FitLife Agency Location"
-                className="grayscale hover:grayscale-0 transition-all duration-500"
+                className=" hover:grayscale-0 transition-all duration-500"
               />
             </div>
             <p className="text-gray-400 text-sm mt-3 text-center">

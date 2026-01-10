@@ -32,10 +32,10 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-sm shadow-md z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16 md:h-20">
+        <div className="flex justify-between items-center h-17 md:h-25">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <div className="relative w-32 h-10 md:w-48 md:h-12 transition-transform duration-300 hover:scale-105 cursor-pointer">
+            <div className="relative w-32 h-22 md:w-48 md:h-20 transition-transform duration-300 hover:scale-105 cursor-pointer">
               <Image
                 src="/logo.png"
                 alt="Swetika Skin Clinic"

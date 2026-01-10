@@ -121,7 +121,7 @@ export default function TreatmentSolutions() {
     {
       icon: Zap,
       title: "Non-Surgical Fat Reduction",
-      image: "/imaged.jpg"
+      image: "/on-Surgical-Fat-Reduction.png"
     },
     {
       icon: Target,
@@ -131,7 +131,7 @@ export default function TreatmentSolutions() {
     {
       icon: Activity,
       title: "Metabolic Weight Management",
-      image: "download.jpg"
+      image: "/weight-loos.webp"
     },
     {
       icon: Sparkles,
@@ -174,18 +174,18 @@ export default function TreatmentSolutions() {
               >
                 <div className="relative overflow-hidden rounded-2xl transition-all duration-500 hover:scale-105 hover:shadow-2xl" style={{border: '2px solid rgba(212, 173, 95, 0.3)'}}>
                   {/* Image */}
-                  <div className="aspect-[3/4] overflow-hidden">
+                  <div className="w-full h-48 sm:h-64 md:h-92 aspect-[3/4] overflow-hidden realative">
                     <img 
                       src={treatment.image} 
                       alt={treatment.title}
-                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                      className="w-full h-full max-sm:h-50 object-cover transition-transform duration-700 group-hover:scale-110"
                     />
                     {/* Gradient Overlay */}
                     <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/60 to-transparent"></div>
                   </div>
 
                   {/* Content */}
-                  <div className="absolute bottom-0 left-0 right-0 p-6">
+                  <div className="absolute bottom-0 left-0 right-0 p-6 pb-4 max-sm:pb-0">
                     {/* Icon */}
                     <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl mb-3 backdrop-blur-md transition-all duration-300 group-hover:scale-110" style={{background: 'rgba(212, 173, 95, 0.3)', border: '1px solid rgba(212, 173, 95, 0.5)'}}>
                       <Icon className="w-6 h-6" style={{color: '#d4ad5f'}} />

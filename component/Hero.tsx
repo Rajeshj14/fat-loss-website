@@ -92,9 +92,9 @@ export default function SwakaayaHeroStats() {
       {/* Hero Section with Background Image */}
       <section className="relative overflow-hidden min-h-screen">
         {/* Background Image with Overlay */}
-        <div className="absolute inset-0">
+        <div className="absolute inset-0 mt-20 max-sm:mt-15">
           <img
-            src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=1920&q=80"
+            src="/ban-image.jpg"
             alt="Fitness Background"
             className="w-full h-full object-cover"
           />
@@ -234,7 +234,7 @@ export default function SwakaayaHeroStats() {
       </section>
 
       {/* Stats Section */}
-      <section className="relative max-sm:py-6 py-10 lg:pb-5 lg:pt-0 bg-gray-900 overflow-hidden">
+      <section className="relative max-sm:py-6 py-10 mt-5 lg:pb-5 lg:pt-0 bg-gray-900 overflow-hidden">
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-5">
           <div

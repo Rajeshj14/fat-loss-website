@@ -20,7 +20,7 @@ export default function Home() {
     <div>
       <Navbar />
       <Hero />
-      {/* <VideoCarousel /> */}
+      <VideoCarousel />
       {/* <CTA /> */}
       <About />
       <TreatmentSolutions />

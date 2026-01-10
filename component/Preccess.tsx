@@ -247,7 +247,7 @@ export default function SwakayaaFeatures() {
               : "opacity-0 -translate-y-10"
           }`}
         >
-          <h1 className="text-4xl md:text-4xl font-bold max-sm:mb-3 mb-4">
+          <h1 className="text-2xl md:text-4xl font-bold max-sm:mb-3 mb-4">
             What Sets
             <span className="bg-gradient-to-t from-[var(--primary-gold)] to-[var(--secondary-silver)] text-transparent bg-clip-text">
               {" "}

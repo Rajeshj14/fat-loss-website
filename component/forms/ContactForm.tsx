@@ -44,7 +44,12 @@ const ContactForm = () => {
   };
 
   return (
-    <div id='contact' className="bg-white rounded-2xl p-8 shadow-xl w-full">
+    <div id='contact' className="bg-white rounded-2xl p-8 w-full" style={{
+    boxShadow: `
+      0 -12px 30px rgba(0,0,0,0.08),
+      0  20px 40px rgba(0,0,0,0.12)
+    `,
+  }}>
       <form onSubmit={handleSubmit} className="space-y-6">
 
         {/* Name */}

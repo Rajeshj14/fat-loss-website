@@ -29,13 +29,13 @@ const AboutSection = () => {
   ];
 
   return (
-    <section id='#about' className="py-15 max-sm:py-10 max-sm:py-8 px-4 sm:py-10 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-50 via-white to-gray-100">
+    <section id='#about' className="py-15 max-sm:py-8 max-sm:py-8 px-4 sm:py-10 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-50 via-white to-gray-100">
       <div className="max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-2 max-sm:gap-6 gap-12 items-center">
           <div className="space-y-8">
             <div className="space-y-4 mb-[10px] max-sm:mb-1">
               <div className="inline-block max-sm:mb-2">
-                <span className="bg-gradient-to-t from-[var(--primary-gold)] to-[var(--secondary-silver)] bg-clip-text text-transparent font-bold text-sm tracking-wider uppercase ">
+                <span className="bg-gradient-to-t from-[var(--primary-gold)] to-[var(--secondary-silver)] bg-clip-text text-transparent font-bold text-sm tracking-wider uppercase lg:text-3xl text-2xl">
                   Where Science Meets Wellness
                 </span>
                 <div className="h-1 w-20 bg-gradient-to-r from-[var(--primary-gold)] to-[var(--secondary-silver)] rounded-full mt-2"></div>
