@@ -553,7 +553,7 @@ export default function SwakaayaHeroStats() {
           <div className="w-full">
             <div className="max-w-3xl space-y-6 max-sm:space-y-4">
               {/* Badge */}
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full backdrop-blur-md max-sm:px-3 max-sm:py-1.5" style={{ background: "rgba(212, 173, 95, 0.2)", border: "1px solid rgba(212, 173, 95, 0.4)" }}>
+              <div className="inline-flex items-center gap-2 px-4 max-sm:mb-2 py-2 rounded-full backdrop-blur-md max-sm:px-3 max-sm:py-1.5" style={{ background: "rgba(212, 173, 95, 0.2)", border: "1px solid rgba(212, 173, 95, 0.4)" }}>
                 <Sparkles className="w-4 h-4 max-sm:w-3 max-sm:h-3" style={{ color: "#d4ad5f" }} />
                 <span className="font-semibold text-sm max-sm:text-xs" style={{ color: "#d4ad5f" }}>
                   Science-Backed Results
@@ -561,7 +561,7 @@ export default function SwakaayaHeroStats() {
               </div>
 
               {/* Headline */}
-              <h1 className="flex flex-col gap-2 max-sm:gap-1">
+              <h1 className="flex flex-col gap-2 max-sm:gap-0 max-sm:mb-1">
                 <span className="text-5xl font-extrabold text-white max-sm:text-2xl">
                   Get the Body You
                 </span>
@@ -577,7 +577,7 @@ export default function SwakaayaHeroStats() {
               </h1>
 
               {/* Description */}
-              <p className="text-xl leading-relaxed max-sm:text-sm" style={{ color: "#dcdcdc" }}>
+              <p className="text-xl leading-relaxed max-sm:text-sm max-sm:mb-0" style={{ color: "#dcdcdc" }}>
                 Experience a personalised, non-surgical approach to fat loss at Swakaaya Wellness. Shed inches, boost metabolism, and reclaim your confidence under expert medical supervision.
               </p>
 
