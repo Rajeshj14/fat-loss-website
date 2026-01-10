@@ -589,7 +589,7 @@ export default function SwakaayaHeroStats() {
   return (
     <div className="bg-gray-900">
       {/* Hero Section with Background Image */}
-      <section className="relative overflow-hidden">
+      <section className="relative overflow-hidden py-10 max-sm:py-2 ">
         {/* Background Image with Overlay - FIXED FOR MOBILE */}
         <div className="absolute inset-0 max-sm:pt-10 h-[120vh]"> {/* Changed max-sm:mt-20 to max-sm:mt-0 */}
           <img
