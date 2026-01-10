@@ -117,7 +117,7 @@ export default function SwakaayaHeroStats() {
           </div>
         </div>
 
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:pb-0 lg:px-8 py-30 pb-18 sm:py-16 lg:pt-30 min-h-screen flex items-center">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:pb-0 lg:px-8 py-30 pb-18 sm:py-16 lg:pt-30 max-sm:pb-0 max-sm:pt-20 min-h-screen flex items-center">
           <div className="w-full">
             {/* Main Content */}
             <div className="max-w-3xl space-y-6 lg:space-y-8 animate-fade-in-up">

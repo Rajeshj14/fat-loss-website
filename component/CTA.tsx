@@ -59,7 +59,7 @@ export default function BeforeAfterCarousel() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-100 flex items-center justify-center max-sm:pb-0 p-4">
+    <div className="bg-gradient-to-br from-gray-50 via-white to-gray-100 flex items-center justify-center max-sm:pb-0 p-4">
       <div className="w-full max-w-5xl">
         
         {/* Header */}

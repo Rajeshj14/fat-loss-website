@@ -10,13 +10,18 @@ const Navbar = () => {
   const navLinks = [
     { name: 'Home', href: '/' },
     { name: 'About', href: '#about' },
-    // { name: 'Programs', href: '#programs' },
     { name: 'Faq', href: '#faq' },
     { name: 'Experts', href: '#experts' },
     { name: 'Contact', href: '#contact' },
   ];
 
   const scrollToSection = (href: string) => {
+    if (href === '/') {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      setIsOpen(false);
+      return;
+    }
+    
     const element = document.querySelector(href);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
@@ -27,52 +32,57 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-sm shadow-md z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-26">
-          <div className="flex items-center">
-            <div className="relative w-36 md:w-54 h-10 md:h-22 transition-transform duration-300 hover:scale-105">
+        <div className="flex justify-between items-center h-16 md:h-20">
+          {/* Logo */}
+          <div className="flex-shrink-0">
+            <div className="relative w-32 h-10 md:w-48 md:h-12 transition-transform duration-300 hover:scale-105 cursor-pointer">
               <Image
                 src="/logo.png"
                 alt="Swetika Skin Clinic"
                 fill
                 className="object-contain"
                 priority
+                onClick={() => scrollToSection('/')}
               />
             </div>
           </div>
 
-          <div className="hidden md:flex space-x-8">
+          {/* Desktop Navigation Links */}
+          <div className="hidden md:flex items-center space-x-8">
             {navLinks.map((link) => (
               <button
                 key={link.name}
                 onClick={() => scrollToSection(link.href)}
-                className="text-gray-700 hover:text-[#d4ad5f] transition-colors duration-300 font-medium"
+                className="text-gray-700 hover:text-[#d4ad5f] transition-colors duration-300 font-medium text-sm lg:text-base"
               >
                 {link.name}
               </button>
             ))}
           </div>
 
-          <div className="hidden md:block ">
-            <a href='type: +918826815442'
-              className="bg-gradient-to-t from-[var(--primary-gold)] to-[var(--secondary-silver)] flex text-white px-6 py-2 rounded-full hover:shadow-lg transition-all duration-300 transform hover:-translate-y-0.5"
+          {/* Desktop Buttons */}
+          <div className="hidden md:flex items-center space-x-4">
+            <a
+              href="tel:+918826815442"
+              className="flex items-center gap-2 bg-gradient-to-t from-[#d4ad5f] to-[#c0c0c0] text-white px-4 py-2 rounded-full hover:shadow-lg transition-all duration-300 transform hover:-translate-y-0.5 text-sm lg:text-base"
             >
-             <Phone className="w-5 h-5 animate-ring" />
+              <Phone className="w-4 h-4 lg:w-5 lg:h-5" />
               +91 8826815442
             </a>
-          </div>
-          <div className="hidden md:block">
             <button
               onClick={() => scrollToSection('#contact')}
-              className="bg-gradient-to-t from-[var(--primary-gold)] to-[var(--secondary-silver)] text-white px-6 py-2 rounded-full hover:shadow-lg transition-all duration-300 transform hover:-translate-y-0.5"
+              className="bg-gradient-to-t from-[#d4ad5f] to-[#c0c0c0] text-white px-4 py-2 rounded-full hover:shadow-lg transition-all duration-300 transform hover:-translate-y-0.5 text-sm lg:text-base"
             >
               Book Consultation
             </button>
           </div>
 
+          {/* Mobile Menu Button */}
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-gray-700 hover:text-green-600 transition-colors"
+              className="text-gray-700 hover:text-[#d4ad5f] transition-colors p-2 rounded-md"
+              aria-label="Toggle menu"
             >
               {isOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -80,30 +90,36 @@ const Navbar = () => {
         </div>
       </div>
 
+      {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden bg-white border-t border-gray-200">
-          <div className="px-2 pt-2 pb-3 space-y-1">
+        <div className="md:hidden bg-white border-t border-gray-100">
+          <div className="px-4 py-3 space-y-2">
             {navLinks.map((link) => (
               <button
                 key={link.name}
                 onClick={() => scrollToSection(link.href)}
-                className="block w-full text-left px-3 py-2 text-gray-700 hover:text-green-600 hover:bg-gray-50 rounded-md transition-colors"
+                className="block w-full text-left px-4 py-3 text-gray-700 hover:text-[#d4ad5f] hover:bg-gray-50 rounded-lg transition-colors text-base font-medium"
               >
                 {link.name}
               </button>
             ))}
-             <button
-              onClick={() => scrollToSection('#contact')}
-              className="bg-gradient-to-t from-[var(--primary-gold)] to-[var(--secondary-silver)] text-white px-6 py-2 rounded-full hover:shadow-lg transition-all duration-300 transform hover:-translate-y-0.5"
-            >
-              Book Consultation
-            </button>
-            <button
-              onClick={() => scrollToSection('#contact')}
-              className="w-full text-center bg-gradient-to-t from-[var(--primary-gold)] to-[var(--secondary-silver)] text-white px-6 py-2 rounded-full hover:shadow-lg transition-all duration-300 mt-2"
-            >
-              Book Consultation
-            </button>
+            
+            <div className="pt-2 space-y-3">
+              <a
+                href="tel:+918826815442"
+                className="flex items-center justify-center gap-2 bg-gradient-to-t from-[#d4ad5f] to-[#c0c0c0] text-white px-6 py-3 rounded-full hover:shadow-lg transition-all duration-300 w-full text-base"
+              >
+                <Phone className="w-5 h-5" />
+                +91 8826815442
+              </a>
+              
+              <button
+                onClick={() => scrollToSection('#contact')}
+                className="w-full bg-gradient-to-t from-[#d4ad5f] to-[#c0c0c0] text-white px-6 py-3 rounded-full hover:shadow-lg transition-all duration-300 text-base"
+              >
+                Book Consultation
+              </button>
+            </div>
           </div>
         </div>
       )}

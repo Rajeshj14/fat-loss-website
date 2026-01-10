@@ -128,7 +128,7 @@ export default function VideoCarousel() {
   };
 
   return (
-    <div className="min-h-screen via-gray-800 to-black flex items-center justify-center p-4 md:p-6 ">
+    <div className=" via-gray-800 to-black flex items-center justify-center p-4 md:p-6 ">
       <div className="w-full max-w-7xl">
         <div className="text-center mb-8 max-sm:mb-3 md:mb-12 lg:mb-8">
           <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-black pt-3 max-sm:pt-0 mb-2 md:mb-3">
