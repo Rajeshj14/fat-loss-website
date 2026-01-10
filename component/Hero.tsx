@@ -88,7 +88,7 @@ import {
 
 export default function SwakaayaHeroStats() {
   return (
-    <div className="min-h-screen bg-gray-900">
+    <div className="bg-gray-900">
       {/* Hero Section with Background Image */}
       <section className="relative overflow-hidden min-h-screen">
         {/* Background Image with Overlay */}

@@ -298,10 +298,10 @@ export default function VideoCarousel() {
 
   const videos = [
     { id: 1, videoUrl: "/WL-testimonial.mp4" },
-    // { id: 2, videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4" },
-    // { id: 3, videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4" },
-    // { id: 4, videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4" },
-    // { id: 5, videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4" },
+    { id: 2, videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4" },
+    { id: 3, videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4" },
+    { id: 4, videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4" },
+    { id: 5, videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4" },
   ];
 
   const currentVideo = videos[currentIndex];
@@ -384,17 +384,17 @@ export default function VideoCarousel() {
         {/* Carousel Container */}
         <div className="relative">
           {/* Single Video Display */}
-          <div className="relative mx-auto max-w-4xl">
-            <div className="bg-gray-800 rounded-xl sm:rounded-2xl overflow-hidden shadow-2xl">
+          <div className="relative mx-auto w-[50%] ">
+            <div className="bg-gray-800 rounded-xl sm:rounded-2xl overflow-hidden shadow-2xl ">
               {/* Video Container */}
               <div className="relative aspect-video bg-black">
                 <video
                   ref={(el) => {
                     videoRefs.current[currentVideo.id] = el;
                   }}
-                  className="w-full h-full object-cover"
+                  className="w-full h-100 object-cover"
                   loop
-                  // muted={mutedVideos[currentVideo.id]}
+                  muted={mutedVideos[currentVideo.id]}
                   onClick={() => togglePlay(currentVideo.id)}
                   src={currentVideo.videoUrl}
                 />
