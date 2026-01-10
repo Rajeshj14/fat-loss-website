@@ -64,7 +64,7 @@ const ContactForm = () => {
             onChange={handleChange}
             required
             className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-[#d4ad5f] focus:ring-2 focus:ring-[#d4ad5f] outline-none transition-all"
-            placeholder="John Doe"
+            placeholder="Enter your full name"
           />
         </div>
 
@@ -80,7 +80,7 @@ const ContactForm = () => {
             onChange={handleChange}
             required
             className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-[#d4ad5f] focus:ring-2 focus:ring-[#d4ad5f] outline-none transition-all"
-            placeholder="john@example.com"
+            placeholder="Enter your email address"
           />
         </div>
 
@@ -96,7 +96,7 @@ const ContactForm = () => {
             onChange={handleChange}
             required
             className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-[#d4ad5f] focus:ring-2 focus:ring-[#d4ad5f] outline-none transition-all"
-            placeholder="+91 98765 43210"
+            placeholder="Enter your phone number"
           />
         </div>
 
