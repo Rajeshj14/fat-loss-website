@@ -591,7 +591,7 @@ export default function SwakaayaHeroStats() {
       {/* Hero Section with Background Image */}
       <section className="relative overflow-hidden">
         {/* Background Image with Overlay - FIXED FOR MOBILE */}
-        <div className="absolute inset-0 mt-25 max-sm:pt-10 max-sm:mt-0"> {/* Changed max-sm:mt-20 to max-sm:mt-0 */}
+        <div className="absolute inset-0 max-sm:pt-10 h-[120vh]"> {/* Changed max-sm:mt-20 to max-sm:mt-0 */}
           <img
             src="/ban-image.jpg"
             alt="Fitness Background"
