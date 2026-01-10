@@ -12,15 +12,15 @@ export default function VideoCarousel() {
   const videoRefs = useRef<Record<number, HTMLVideoElement | null>>({});
 
   const videos = [
-    { id: 1, videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" },
-    { id: 2, videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4" },
-    { id: 3, videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4" },
-    { id: 4, videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4" },
-    { id: 5, videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4" },
-    { id: 6, videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4" },
-    { id: 7, videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/Sintel.mp4" },
-    { id: 8, videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/SubaruOutbackOnStreetAndDirt.mp4" },
-    { id: 9, videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4" },
+    { id: 1, videoUrl: "/WL-testimonial.mp4" },
+    // { id: 2, videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4" },
+    // { id: 3, videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4" },
+    // { id: 4, videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4" },
+    // { id: 5, videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4" },
+    // { id: 6, videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4" },
+    // { id: 7, videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/Sintel.mp4" },
+    // { id: 8, videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/SubaruOutbackOnStreetAndDirt.mp4" },
+    // { id: 9, videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4" },
   ];
 
   // Handle responsive layout
@@ -135,8 +135,7 @@ export default function VideoCarousel() {
             Real People &<span className="bg-gradient-to-t from-[var(--primary-gold)] to-[var(--secondary-silver)] text-transparent bg-clip-text"> Real Results.</span>
           </h1>
           <p className="text-gray-400 text-sm sm:text-base">
-            {visibleCount === 1 ? '1 video on mobile' : 
-             visibleCount === 2 ? '2 videos on tablet' : 
+            {visibleCount === 1 ? '1 video on mobile' :  
              ''}Individual outcomes may vary based on age, health, and lifestyle.
           </p>
         </div>
@@ -146,8 +145,7 @@ export default function VideoCarousel() {
           {/* Responsive Grid of Videos */}
           <div className={`grid ${gridCols[visibleCount as keyof typeof gridCols]} gap-4 sm:gap-6 h-120`}>
             {visibleVideos.map((video) => (
-              <div 
-                key={video.id} 
+              <div
                 className="bg-gray-800 rounded-xl sm:rounded-2xl overflow-hidden shadow-lg sm:shadow-2xl transition-all duration-300 hover:shadow-red-900/30 hover:scale-[1.02]"
               >
                 {/* Video Container */}

@@ -84,7 +84,9 @@ const AboutSection = () => {
             >
               <span className="relative z-10 flex items-center justify-center gap-2">
                 <UserCircle className="w-5 h-5" />
-                Book Your Doctor-Led Weight Loss Consultation
+                <span className='block sm:hidden'>  Book Your Consultation</span>
+                <span className='hidden sm:block'>  Book Your Doctor-Led Weight Loss Consultation</span>
+               
               </span>
             </button>
           </div>

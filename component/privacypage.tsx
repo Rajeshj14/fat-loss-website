@@ -3,7 +3,7 @@ import { Shield, Lock, Eye, FileText, Mail } from 'lucide-react';
 
 export default function PrivacyPolicyPage() {
   return (
-    <div className="min-h-screen bg-gray-50 py-12 px-4">
+    <div className="min-h-screen bg-gray-50 py-12 mt-15 px-4">
       <div className="max-w-4xl mx-auto bg-white rounded-2xl shadow-xl p-8 md:p-12 border-2" style={{ borderColor: '#dcdcdc' }}>
         
         {/* Header */}
@@ -191,12 +191,14 @@ export default function PrivacyPolicyPage() {
 
         {/* Back Button */}
         <div className="mt-8 text-center">
-          <button 
-            className="px-8 py-3 text-white font-semibold rounded-lg transition duration-200 hover:opacity-90"
-            style={{ backgroundColor: '#d4ad5f' }}
-          >
-            Back to Home
-          </button>
+          <a href='/'
+              className="bg-gradient-to-t from-[var(--primary-gold)] to-[var(--secondary-silver)] text-white px-8 py-4 rounded-full font-semibold text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 hover:opacity-95 group relative overflow-hidden"
+            >
+              {/* <span className="relative z-10 flex items-center justify-center gap-2"> */}
+                {/* <UserCircle className="w-5 h-5" /> */}
+                Back To Home
+              {/* </span> */}
+            </a>
         </div>
       </div>
     </div>

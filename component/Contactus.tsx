@@ -70,7 +70,15 @@ const ReviewSection = () => {
             onClick={() => document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })}
             className="bg-gradient-to-t from-[var(--primary-gold)] to-[var(--secondary-silver)] text-white px-8 py-4 rounded-full font-semibold text-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 active:scale-95"
           >
-            Get Expert Advice for Your Weight Loss
+            <span className="block sm:hidden">
+              Get Expert Advice
+            </span>
+
+            {/* Desktop */}
+            <span className="hidden sm:block">
+              Get Expert Advice for Your Weight Loss
+            </span>
+
           </button>
         </div>
       </div>

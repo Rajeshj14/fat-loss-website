@@ -26,15 +26,15 @@ export default function ThankYouPage() {
 
         {/* Action Buttons */}
         <div className="space-y-3">
-          <button className="w-full text-white font-semibold py-3 px-6 rounded-lg transition duration-200 flex items-center justify-center gap-2 hover:opacity-90" style={{ backgroundColor: '#d4ad5f' }}>
+          <a href='/' className="w-full text-white font-semibold py-3 px-6 rounded-lg transition duration-200 flex items-center justify-center gap-2 hover:opacity-90" style={{ backgroundColor: '#d4ad5f' }}>
             <Home className="w-5 h-5" />
             Back to Home
-          </button>
+          </a>
           
-          <button className="w-full font-semibold py-3 px-6 rounded-lg transition duration-200 flex items-center justify-center gap-2 hover:opacity-80" style={{ backgroundColor: '#dcdcdc', color: '#333' }}>
+          <a href='/' className="w-full font-semibold py-3 px-6 rounded-lg transition duration-200 flex items-center justify-center gap-2 hover:opacity-80" style={{ backgroundColor: '#dcdcdc', color: '#333' }}>
             <Mail className="w-5 h-5" />
             Contact Support
-          </button>
+          </a>
         </div>
 
         {/* Footer Note */}

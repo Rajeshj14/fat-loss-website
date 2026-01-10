@@ -119,14 +119,17 @@ const ContactForm = () => {
         )}
 
         {/* Submit */}
-        <button
+        {/* <button
           type="submit"
           disabled={isSubmitting}
           className="w-full bg-gradient-to-t from-[var(--primary-gold)] to-[var(--secondary-silver)] text-white px-8 py-4 rounded-lg font-semibold hover:shadow-xl transition-all transform hover:-translate-y-0.5 disabled:opacity-50 flex items-center justify-center gap-2"
         >
+        </button> */}
+        <button  type="submit" disabled={isSubmitting}
+              className="w-full bg-gradient-to-t from-[var(--primary-gold)] to-[var(--secondary-silver)] text-white px-8 py-4 rounded-full font-semibold text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 hover:opacity-95 group relative overflow-hidden flex items-center justify-center gap-2"
+            >
           {isSubmitting ? 'Sending...' : <>Send Message <Send size={18} /></>}
-        </button>
-
+            </button>
       </form>
     </div>
   );

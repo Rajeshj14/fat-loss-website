@@ -187,7 +187,7 @@ export default function DoctorProfile() {
                 <div className="aspect-[3/3] relative">
                   {/* Full doctor image */}
                   <img 
-                    src="/images/doctors/dr-neha-thukral.jpg" 
+                    src="/doctor.webp" 
                     alt="Dr. Neha Thukral - Leading Weight Loss Specialist"
                     className="w-full h-full object-cover"
                     onError={(e) => {

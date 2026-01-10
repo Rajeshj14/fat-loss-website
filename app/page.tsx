@@ -20,15 +20,15 @@ export default function Home() {
     <div>
       <Navbar />
       <Hero />
-      <VideoCarousel />
-      <CTA />
+      {/* <VideoCarousel /> */}
+      {/* <CTA /> */}
       <About />
       <TreatmentSolutions />
       <Process />
       <ReviewSection />
       <WhyChooseUs />
       <FAQ />
-      <Commonmap />
+      {/* <Commonmap /> */}
       <Footer />
     </div>
   );

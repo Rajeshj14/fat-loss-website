@@ -38,7 +38,7 @@ const Footer = () => {
               >
                 <Instagram size={20} />
               </a>
-              <a
+              {/* <a
                 href="#"
                 className="bg-gray-800 w-10 h-10 rounded-full flex items-center justify-center hover:bg-gradient-to-r hover:from-[var(--primary-gold)] to-[var(--secondary-silver)] transition-all duration-300"
               >
@@ -49,7 +49,7 @@ const Footer = () => {
                 className="bg-gray-800 w-10 h-10 rounded-full flex items-center justify-center hover:bg-gradient-to-r hover:from-[var(--primary-gold)] to-[var(--secondary-silver)] transition-all duration-300"
               >
                 <Linkedin size={20} />
-              </a>
+              </a> */}
             </div>
           </div>
 
@@ -107,33 +107,40 @@ const Footer = () => {
               <li className="flex items-start gap-3">
                 <Phone className="text-[var(--primary-gold)] flex-shrink-0 mt-1" size={18} />
                 <div>
-                  <p className="text-gray-400">+1 (555) 123-4567</p>
-                  <p className="text-gray-500 text-sm">Mon-Fri: 8AM - 8PM</p>
+                  <a href='tel:+91 88268 15442'>+91 88268 15442</a>
+                  {/* <p className="text-gray-500 text-sm">Mon-Fri: 8AM - 8PM</p> */}
                 </div>
               </li>
               <li className="flex items-start gap-3">
                 <Mail className="text-[var(--primary-gold)] flex-shrink-0 mt-1" size={18} />
                 <div>
-                  <p className="text-gray-400">info@fitlifeagency.com</p>
+                  <p className="text-gray-400">swakaayawellness@gmail.com</p>
                   <p className="text-gray-500 text-sm">24/7 Email Support</p>
                 </div>
               </li>
               <li className="flex items-start gap-3">
                 <MapPin className="text-[var(--primary-gold)] flex-shrink-0 mt-1" size={18} />
                 <div>
-                  <p className="text-gray-400">123 Fitness Street</p>
-                  <p className="text-gray-500 text-sm">New York, NY 10001</p>
+                  <p className="text-gray-400">4306, Ground Floor,</p>
+                  <p className="text-gray-500 text-sm"> DLF Phase 4,</p>
+                  <p className="text-gray-500 text-sm"> Adjacent to Galleria market, Gurgaon,</p>
+                  <p className="text-gray-500 text-sm"> Gurgaon,</p>
+                  <p className="text-gray-500 text-sm"> Haryana - 122009</p>
                 </div>
+                  
+
               </li>
             </ul>
 
             <div className="mt-6">
-              <button
-                onClick={() => document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })}
-                className="bg-gradient-to-t from-[var(--primary-gold)] to-[var(--secondary-silver)] text-white px-6 py-3 rounded-lg font-semibold hover:shadow-lg transition-all duration-300 transform hover:-translate-y-0.5"
-              >
+              <button onClick={() => document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })}
+              className="bg-gradient-to-t from-[var(--primary-gold)] to-[var(--secondary-silver)] text-white px-8 py-4 rounded-full font-semibold text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 hover:opacity-95 group relative overflow-hidden"
+            >
+              <span className="relative z-10 flex items-center justify-center gap-2">
+                {/* <UserCircle className="w-5 h-5" /> */}
                 Book Consultation
-              </button>
+              </span>
+            </button>
             </div>
           </div>
 

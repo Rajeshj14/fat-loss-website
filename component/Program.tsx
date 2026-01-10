@@ -121,17 +121,17 @@ export default function TreatmentSolutions() {
     {
       icon: Zap,
       title: "Non-Surgical Fat Reduction",
-      image: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=600&q=80"
+      image: "/imaged.jpg"
     },
     {
       icon: Target,
       title: "Body Contouring & Shaping",
-      image: "https://images.unsplash.com/photo-1518611012118-696072aa579a?w=600&q=80"
+      image: "/istockphoto.jpg"
     },
     {
       icon: Activity,
       title: "Metabolic Weight Management",
-      image: "https://images.unsplash.com/photo-1476480862126-209bfaa8edc8?w=600&q=80"
+      image: "download.jpg"
     },
     {
       icon: Sparkles,
@@ -224,7 +224,14 @@ export default function TreatmentSolutions() {
               className="bg-gradient-to-t from-[var(--primary-gold)] to-[var(--secondary-silver)] text-white px-8 py-4 rounded-full font-semibold text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 hover:opacity-95 group relative overflow-hidden"
             >
               <span className="relative z-10 flex items-center justify-center gap-2">
-                Find Your Personalized Treatment Plan
+                 <span className="block sm:hidden">
+                    Find Your Plan
+                  </span>
+
+                  {/* Desktop text */}
+                  <span className="hidden sm:block">
+                    Find Your Personalized Treatment Plan
+                  </span>
               <ArrowRight className="w-5 lg:w-6 h-5 lg:h-6 group-hover:translate-x-2 transition-transform duration-300" />
               </span>
             </button>
