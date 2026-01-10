@@ -88,9 +88,9 @@ import {
 
 export default function SwakaayaHeroStats() {
   return (
-    <div className="bg-gray-900">
+    <div className="bg-gray-900 min-h-screen">
       {/* Hero Section with Background Image */}
-      <section className="relative overflow-hidden">
+      <section className="relative overflow-hidden min-h-screen">
         {/* Background Image with Overlay */}
         <div className="absolute inset-0 mt-20 max-sm:mt-15">
           <img
@@ -117,7 +117,7 @@ export default function SwakaayaHeroStats() {
           </div>
         </div>
 
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:pb-0 lg:px-8 py-30 pb-18 sm:py-16 lg:pt-30 max-sm:pb-0 max-sm:pt-20 min-h-screen flex items-center">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:pb-0 lg:px-8 py-30 pb-18 sm:py-16 lg:pt-30 max-sm:pb-0 max-sm:pt-20 flex items-center">
           <div className="w-full">
             {/* Main Content */}
             <div className="max-w-3xl space-y-6 lg:space-y-8 animate-fade-in-up">
