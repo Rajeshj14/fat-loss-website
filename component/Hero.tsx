@@ -234,7 +234,7 @@ export default function SwakaayaHeroStats() {
       </section>
 
       {/* Stats Section */}
-      <section className="relative max-sm:py-6 py-10 mt-5 lg:pb-5 lg:pt-0 bg-gray-900 overflow-hidden">
+      <section className="relative max-sm:py-6 py-10 lg:pb-5 lg:pt-5 bg-gray-900 overflow-hidden">
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-5">
           <div

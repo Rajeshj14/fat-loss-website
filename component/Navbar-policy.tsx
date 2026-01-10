@@ -1,8 +1,8 @@
-'use client'
+"use client";
 
-import { Menu, Phone, X } from 'lucide-react';
-import Image from 'next/image';
-import { useState } from 'react';
+import { Menu, Phone, X } from "lucide-react";
+import Image from "next/image";
+import { useState } from "react";
 
 const Navbars = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -16,15 +16,15 @@ const Navbars = () => {
   // ];
 
   const scrollToSection = (href: string) => {
-    if (href === '/') {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+    if (href === "/") {
+      window.scrollTo({ top: 0, behavior: "smooth" });
       setIsOpen(false);
       return;
     }
-    
+
     const element = document.querySelector(href);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({ behavior: "smooth" });
       setIsOpen(false);
     }
   };
@@ -32,17 +32,17 @@ const Navbars = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-sm shadow-md z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16 md:h-20">
+        <div className="flex justify-between items-center h-16 md:h-25">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <div className="relative w-32 h-10 md:w-48 md:h-12 transition-transform duration-300 hover:scale-105 cursor-pointer">
+            <div className="relative w-32 h-22 md:w-50 md:h-25 transition-transform duration-300 hover:scale-105 cursor-pointer">
               <Image
                 src="/logo.png"
                 alt="Swetika Skin Clinic"
                 fill
                 className="object-contain"
                 priority
-                onClick={() => scrollToSection('/')}
+                onClick={() => scrollToSection("/")}
               />
             </div>
           </div>
@@ -70,7 +70,7 @@ const Navbars = () => {
               +91 8826815442
             </a>
             <button
-              onClick={() => scrollToSection('#contact')}
+              onClick={() => scrollToSection("#contact")}
               className="bg-gradient-to-t from-[#d4ad5f] to-[#c0c0c0] text-white px-4 py-2 rounded-full hover:shadow-lg transition-all duration-300 transform hover:-translate-y-0.5 text-sm lg:text-base"
             >
               Book Consultation
@@ -103,7 +103,7 @@ const Navbars = () => {
                 {link.name}
               </button>
             ))} */}
-            
+
             <div className="pt-2 space-y-3">
               <a
                 href="tel:+918826815442"
@@ -112,9 +112,9 @@ const Navbars = () => {
                 <Phone className="w-5 h-5" />
                 +91 8826815442
               </a>
-              
+
               <button
-                onClick={() => scrollToSection('#contact')}
+                onClick={() => scrollToSection("#contact")}
                 className="w-full bg-gradient-to-t from-[#d4ad5f] to-[#c0c0c0] text-white px-6 py-3 rounded-full hover:shadow-lg transition-all duration-300 text-base"
               >
                 Book Consultation
