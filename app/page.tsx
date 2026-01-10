@@ -1,5 +1,6 @@
 
 import AboutSection from "@/component/fat-about";
+import ThreeImageCarousel from "@/component/fat-befor-after";
 import VideoCarousel from "@/component/fat-before";
 import ReviewSection from "@/component/fat-contactus";
 import FAQ from "@/component/fat-faq";
@@ -16,8 +17,8 @@ export default function Home() {
     <div>
       <Navbar />
       <SwakaayaHeroStats />
-      <VideoCarousel />
-      {/* <CTA /> */}
+      {/* <VideoCarousel /> */}
+      <ThreeImageCarousel />
       <AboutSection />
       <TreatmentSolutions />
       <SwakayaaFeatures />
