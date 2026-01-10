@@ -1,5 +1,6 @@
-import Navbars from '@/component/Navbar-policy'
-import PrivacyPolicyPage from '@/component/privacypage'
+import Navbars from '@/component/fat-navbar-policy'
+import PrivacyPolicyPage from '@/component/fat-privacypage'
+
 import React from 'react'
 
 const page = () => {

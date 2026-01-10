@@ -3,7 +3,7 @@ import { CheckCircle, Home, Mail } from 'lucide-react';
 
 export default function ThankYouPage() {
   return (
-    <div className="min-h-screen bg-gray-50 flex mt-7 items-center justify-center p-4">
+    <div className="min-h-screen bg-gray-50 flex mt-7 max-sm:mt-16 items-center justify-center p-4">
       <div className="max-w-md w-full bg-white rounded-2xl shadow-xl p-8 text-center border-2" style={{ borderColor: '#dcdcdc' }}>
         {/* Success Icon */}
         <div className="flex justify-center mb-6">
