@@ -88,7 +88,7 @@ import {
 
 export default function SwakaayaHeroStats() {
   return (
-    <div className="bg-gray-900 min-h-screen">
+    <div className="bg-gray-900">
       {/* Hero Section with Background Image */}
       <section className="relative overflow-hidden">
         {/* Background Image with Overlay */}
@@ -190,7 +190,7 @@ export default function SwakaayaHeroStats() {
               </p>
 
               {/* CTAs */}
-              <div className="flex flex-col sm:flex-row gap-4 items-stretch sm:items-center pt-2 lg:pt-4 mb-2">
+              <div className="flex flex-col sm:flex-row gap-4 items-stretch sm:items-center pt-2 lg:pt-4 mb-5 max-sm:mb-2">
                 <button
                   onClick={() =>
                     document

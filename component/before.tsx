@@ -284,7 +284,7 @@
 
 "use client";
 
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import {
   Play,
   Pause,
@@ -298,38 +298,28 @@ import {
 
 export default function VideoCarousel() {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [playingVideos, setPlayingVideos] = useState({});
-  const [mutedVideos, setMutedVideos] = useState({});
-  const [fullscreenVideo, setFullscreenVideo] = useState(null);
-  const videoRefs = useRef({});
+  const [playingVideos, setPlayingVideos] = useState<Record<number, boolean>>({});
+  const [mutedVideos, setMutedVideos] = useState<Record<number, boolean>>({});
+  const [fullscreenVideo, setFullscreenVideo] = useState<number | null>(null);
+  const videoRefs = useRef<Record<number, HTMLVideoElement | null>>({});
 
   const videos = [
     { id: 1, videoUrl: "/WL-testimonial.mp4" },
-    {
-      id: 2,
-      videoUrl:
-        "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
-    },
-    {
-      id: 3,
-      videoUrl:
-        "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
-    },
-    {
-      id: 4,
-      videoUrl:
-        "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4",
-    },
-    {
-      id: 5,
-      videoUrl:
-        "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4",
-    },
   ];
 
   const currentVideo = videos[currentIndex];
 
-  const togglePlay = (id) => {
+  // Initialize muted state
+  useEffect(() => {
+    const initialMutedState: Record<number, boolean> = {};
+    videos.forEach(video => {
+      initialMutedState[video.id] = true;
+    });
+    setMutedVideos(initialMutedState);
+  }, []);
+
+  // Fixed togglePlay function - Now working properly
+  const togglePlay = (id: number) => {
     const video = videoRefs.current[id];
     if (video) {
       if (video.paused) {
@@ -342,12 +332,18 @@ export default function VideoCarousel() {
     }
   };
 
-  const toggleMute = (id) => {
+  const toggleMute = (id: number, e?: React.MouseEvent) => {
+    if (e) e.stopPropagation();
     const video = videoRefs.current[id];
     if (video) {
       video.muted = !video.muted;
       setMutedVideos((prev) => ({ ...prev, [id]: !prev[id] }));
     }
+  };
+
+  const handleVideoClick = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    togglePlay(currentVideo.id);
   };
 
   const nextVideo = () => {
@@ -368,7 +364,8 @@ export default function VideoCarousel() {
     }
   };
 
-  const toggleFullscreen = (id) => {
+  const toggleFullscreen = (id: number | null, e?: React.MouseEvent) => {
+    if (e) e.stopPropagation();
     if (fullscreenVideo === id) {
       setFullscreenVideo(null);
     } else {
@@ -376,7 +373,7 @@ export default function VideoCarousel() {
     }
   };
 
-  const goToVideo = (index) => {
+  const goToVideo = (index: number) => {
     pauseCurrentVideo();
     setCurrentIndex(index);
   };
@@ -411,7 +408,7 @@ export default function VideoCarousel() {
 
         {/* Carousel Container */}
         <div className="relative">
-          {/* Single Video Display */}
+          {/* Single Video Display - Keeping your exact original dimensions */}
           <div className="relative mx-auto w-[80%] sm:w-[70%] md:w-[60%] lg:w-[40%] object-cover rounded-xl shadow-2xl">
             <div className="bg-gray-800 rounded-xl sm:rounded-2xl overflow-hidden shadow-2xl">
               {/* Video Container */}
@@ -423,13 +420,14 @@ export default function VideoCarousel() {
                   className="w-full h-[350px] sm:h-[500px] md:h-[550px] object-cover"
                   loop
                   muted={mutedVideos[currentVideo.id]}
-                  playsInline
+                  onClick={handleVideoClick}
                   src={currentVideo.videoUrl}
+                  playsInline
                 />
 
-                {/* Video Controls Overlay - Always visible on mobile, hover on desktop */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-100 sm:opacity-0 sm:hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-                  <div className="absolute bottom-4 sm:bottom-6 left-0 right-0 px-4 sm:px-6 pointer-events-auto">
+                {/* Video Controls Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300">
+                  <div className="absolute bottom-4 sm:bottom-6 left-0 right-0 px-4 sm:px-6">
                     <div className="flex items-center justify-center gap-3 sm:gap-4">
                       {/* Play/Pause */}
                       <button
@@ -450,7 +448,7 @@ export default function VideoCarousel() {
                       <button
                         onClick={(e) => {
                           e.stopPropagation();
-                          toggleMute(currentVideo.id);
+                          toggleMute(currentVideo.id, e);
                         }}
                         className="bg-white/20 hover:bg-white/30 text-white rounded-full p-3 sm:p-4 transition-all hover:scale-110"
                       >
@@ -465,7 +463,7 @@ export default function VideoCarousel() {
                       <button
                         onClick={(e) => {
                           e.stopPropagation();
-                          toggleFullscreen(currentVideo.id);
+                          toggleFullscreen(currentVideo.id, e);
                         }}
                         className="bg-white/20 hover:bg-white/30 text-white rounded-full p-3 sm:p-4 transition-all hover:scale-110"
                       >
@@ -475,14 +473,14 @@ export default function VideoCarousel() {
                   </div>
                 </div>
 
-                {/* Center Play Button (when paused) - Only on desktop */}
+                {/* Center Play Button (when paused) */}
                 {!playingVideos[currentVideo.id] && (
                   <button
                     onClick={(e) => {
                       e.stopPropagation();
                       togglePlay(currentVideo.id);
                     }}
-                    className="hidden sm:block absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-gradient-to-t from-yellow-600 to-gray-400 rounded-full p-5 sm:p-6 transition-all hover:scale-110 shadow-2xl pointer-events-auto"
+                    className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-gradient-to-t from-yellow-600 to-gray-400 rounded-full p-5 sm:p-6 transition-all hover:scale-110 shadow-2xl"
                   >
                     <Play className="w-8 h-8 sm:w-10 sm:h-10 text-white" />
                   </button>
@@ -490,7 +488,7 @@ export default function VideoCarousel() {
               </div>
             </div>
 
-            {/* Navigation Arrows */}
+            {/* Navigation Arrows - Only show if multiple videos */}
             {videos.length > 1 && (
               <>
                 <button
@@ -513,7 +511,7 @@ export default function VideoCarousel() {
           </div>
         </div>
 
-        {/* Video Counter & Navigation Dots */}
+        {/* Video Counter & Navigation Dots - Only show if multiple videos */}
         {videos.length > 1 && (
           <div className="flex flex-col items-center mt-6 sm:mt-8">
             <div className="flex gap-2">
@@ -534,7 +532,7 @@ export default function VideoCarousel() {
         )}
 
         {/* Fullscreen Modal */}
-        {fullscreenVideo && (
+        {fullscreenVideo !== null && (
           <div className="fixed inset-0 bg-black z-50 flex items-center justify-center p-2 sm:p-4">
             <button
               onClick={() => toggleFullscreen(null)}
@@ -547,12 +545,15 @@ export default function VideoCarousel() {
             <div className="w-full max-w-6xl">
               <video
                 ref={(el) => {
-                  videoRefs.current[`fs-${fullscreenVideo}`] = el;
+                  videoRefs.current[
+                    `fs-${fullscreenVideo}` as unknown as number
+                  ] = el;
                 }}
                 className="w-full rounded-lg"
                 src={videos.find((v) => v.id === fullscreenVideo)?.videoUrl}
                 controls
                 autoPlay
+                playsInline
               />
             </div>
           </div>
