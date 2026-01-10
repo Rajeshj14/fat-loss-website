@@ -40,7 +40,7 @@
 
 //     // Add event listener
 //     window.addEventListener('resize', handleResize);
-    
+
 //     // Cleanup
 //     return () => window.removeEventListener('resize', handleResize);
 //   }, []);
@@ -72,7 +72,7 @@
 //             setPlayingVideos(prev => ({ ...prev, [numVideoId]: false }));
 //           }
 //         });
-        
+
 //         video.play();
 //         setPlayingVideos(prev => ({ ...prev, [id]: true }));
 //       } else {
@@ -135,8 +135,8 @@
 //             Real People &<span className="bg-gradient-to-t from-[var(--primary-gold)] to-[var(--secondary-silver)] text-transparent bg-clip-text"> Real Results.</span>
 //           </h1>
 //           <p className="text-gray-400 text-sm sm:text-base">
-//             {visibleCount === 1 ? '1 video on mobile' : 
-//              visibleCount === 2 ? '2 videos on tablet' : 
+//             {visibleCount === 1 ? '1 video on mobile' :
+//              visibleCount === 2 ? '2 videos on tablet' :
 //              ''}Individual outcomes may vary based on age, health, and lifestyle.
 //           </p>
 //         </div>
@@ -146,8 +146,8 @@
 //           {/* Responsive Grid of Videos */}
 //           <div className={`grid ${gridCols[visibleCount as keyof typeof gridCols]} gap-4 sm:gap-6 h-120`}>
 //             {visibleVideos.map((video) => (
-//               <div 
-//                 key={video.id} 
+//               <div
+//                 key={video.id}
 //                 className="bg-gray-800 rounded-xl sm:rounded-2xl overflow-hidden shadow-lg sm:shadow-2xl transition-all duration-300 hover:shadow-red-900/30 hover:scale-[1.02]"
 //               >
 //                 {/* Video Container */}
@@ -180,7 +180,7 @@
 //                             e.stopPropagation();
 //                             togglePlay(video.id);
 //                           }}
-                          
+
 //                           className="bg-gradient-to-t from-[var(--primary-gold)] to-[var(--secondary-silver)] text-white rounded-full p-2 sm:p-3 transition-all hover:scale-110"
 //                         >
 //                           {playingVideos[video.id] ? (
@@ -254,8 +254,6 @@
 
 //         {/* Video Counter & Navigation Dots */}
 
-        
-
 //         {/* Fullscreen Modal */}
 //         {fullscreenVideo && (
 //           <div className="fixed inset-0 bg-black z-50 flex items-center justify-center p-2 sm:p-4">
@@ -265,7 +263,7 @@
 //             >
 //               <X className="w-5 h-5 sm:w-6 sm:h-6" />
 //             </button>
-            
+
 //             <div className="w-full max-w-6xl">
 //               <video
 //                 ref={(el) => {
@@ -284,24 +282,51 @@
 //   );
 // }
 
-'use client'
+"use client";
 
-import { useState, useRef, useEffect } from 'react';
-import { Play, Pause, Volume2, VolumeX, ChevronLeft, ChevronRight, Maximize, X } from 'lucide-react';
+import { useState, useRef, useEffect } from "react";
+import {
+  Play,
+  Pause,
+  Volume2,
+  VolumeX,
+  ChevronLeft,
+  ChevronRight,
+  Maximize,
+  X,
+} from "lucide-react";
 
 export default function VideoCarousel() {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [playingVideos, setPlayingVideos] = useState<Record<number, boolean>>({});
+  const [playingVideos, setPlayingVideos] = useState<Record<number, boolean>>(
+    {}
+  );
   const [mutedVideos, setMutedVideos] = useState<Record<number, boolean>>({});
   const [fullscreenVideo, setFullscreenVideo] = useState<number | null>(null);
   const videoRefs = useRef<Record<number, HTMLVideoElement | null>>({});
 
   const videos = [
     { id: 1, videoUrl: "/WL-testimonial.mp4" },
-    { id: 2, videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4" },
-    { id: 3, videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4" },
-    { id: 4, videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4" },
-    { id: 5, videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4" },
+    {
+      id: 2,
+      videoUrl:
+        "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
+    },
+    {
+      id: 3,
+      videoUrl:
+        "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
+    },
+    {
+      id: 4,
+      videoUrl:
+        "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4",
+    },
+    {
+      id: 5,
+      videoUrl:
+        "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4",
+    },
   ];
 
   const currentVideo = videos[currentIndex];
@@ -311,10 +336,10 @@ export default function VideoCarousel() {
     if (video) {
       if (video.paused) {
         video.play();
-        setPlayingVideos(prev => ({ ...prev, [id]: true }));
+        setPlayingVideos((prev) => ({ ...prev, [id]: true }));
       } else {
         video.pause();
-        setPlayingVideos(prev => ({ ...prev, [id]: false }));
+        setPlayingVideos((prev) => ({ ...prev, [id]: false }));
       }
     }
   };
@@ -323,7 +348,7 @@ export default function VideoCarousel() {
     const video = videoRefs.current[id];
     if (video) {
       video.muted = !video.muted;
-      setMutedVideos(prev => ({ ...prev, [id]: !prev[id] }));
+      setMutedVideos((prev) => ({ ...prev, [id]: !prev[id] }));
     }
   };
 
@@ -341,7 +366,7 @@ export default function VideoCarousel() {
     const video = videoRefs.current[currentVideo.id];
     if (video) {
       video.pause();
-      setPlayingVideos(prev => ({ ...prev, [currentVideo.id]: false }));
+      setPlayingVideos((prev) => ({ ...prev, [currentVideo.id]: false }));
     }
   };
 
@@ -363,7 +388,9 @@ export default function VideoCarousel() {
       <div className="bg-gradient-to-b from-black via-gray-800 to-black flex items-center justify-center p-8">
         <div className="text-center text-white">
           <h2 className="text-2xl font-bold mb-4">No Videos Available</h2>
-          <p className="text-gray-400">Add videos to display in the carousel.</p>
+          <p className="text-gray-400">
+            Add videos to display in the carousel.
+          </p>
         </div>
       </div>
     );
@@ -374,7 +401,10 @@ export default function VideoCarousel() {
       <div className="w-full max-w-5xl mx-auto">
         <div className="text-center mb-6 sm:mb-8 md:mb-10">
           <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-black mb-2 md:mb-3">
-            Real People & <span className="bg-gradient-to-t from-yellow-600 to-gray-400 text-transparent bg-clip-text">Real Results.</span>
+            Real People &{" "}
+            <span className="bg-gradient-to-t from-yellow-600 to-gray-400 text-transparent bg-clip-text">
+              Real Results.
+            </span>
           </h1>
           <p className="text-gray-600 text-sm sm:text-base">
             Individual outcomes may vary based on age, health, and lifestyle.
@@ -384,15 +414,15 @@ export default function VideoCarousel() {
         {/* Carousel Container */}
         <div className="relative">
           {/* Single Video Display */}
-          <div className="relative mx-auto w-[50%] ">
-            <div className="bg-gray-800 rounded-xl sm:rounded-2xl overflow-hidden shadow-2xl ">
+          <div className="relative mx-auto w-[80%] sm:w-[70%] md:w-[60%] lg:w-[40%] object-cover rounded-xl shadow-2xl">
+            <div className="bg-gray-800 rounded-xl sm:rounded-2xl overflow-hidden shadow-2xl">
               {/* Video Container */}
-              <div className="relative aspect-video bg-black">
+              <div className="relative">
                 <video
                   ref={(el) => {
                     videoRefs.current[currentVideo.id] = el;
                   }}
-                  className="w-full h-100 object-cover"
+                  className="w-full h-[350px] sm:h-[500px] md:h-[550px] object-cover"
                   loop
                   muted={mutedVideos[currentVideo.id]}
                   onClick={() => togglePlay(currentVideo.id)}
@@ -495,8 +525,8 @@ export default function VideoCarousel() {
                   onClick={() => goToVideo(index)}
                   className={`transition-all rounded-full ${
                     currentIndex === index
-                      ? 'w-8 h-3 bg-gradient-to-r from-yellow-600 to-gray-400'
-                      : 'w-3 h-3 bg-gray-400 hover:bg-gray-500'
+                      ? "w-8 h-3 bg-gradient-to-r from-yellow-600 to-gray-400"
+                      : "w-3 h-3 bg-gray-400 hover:bg-gray-500"
                   }`}
                   aria-label={`Go to video ${index + 1}`}
                 />
@@ -515,14 +545,16 @@ export default function VideoCarousel() {
             >
               <X className="w-5 h-5 sm:w-6 sm:h-6" />
             </button>
-            
+
             <div className="w-full max-w-6xl">
               <video
                 ref={(el) => {
-                  videoRefs.current[`fs-${fullscreenVideo}` as unknown as number] = el;
+                  videoRefs.current[
+                    `fs-${fullscreenVideo}` as unknown as number
+                  ] = el;
                 }}
                 className="w-full rounded-lg"
-                src={videos.find(v => v.id === fullscreenVideo)?.videoUrl}
+                src={videos.find((v) => v.id === fullscreenVideo)?.videoUrl}
                 controls
                 autoPlay
               />
