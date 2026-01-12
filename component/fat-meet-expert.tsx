@@ -151,7 +151,7 @@ export default function DoctorProfile() {
       <div className="max-w-7xl mx-auto">
         {/* Heading with decorative elements */}
         <div className={`text-center max-sm:mb-6 mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-10'}`}>
-          <h1 className="text-4xl md:text-4xl font-bold max-sm:mb-2 mb-4">
+          <h1 className="text-2xl md:text-4xl font-bold max-sm:mb-2 mb-4">
             Meet the <span className="bg-gradient-to-t from-[var(--primary-gold)] to-[var(--secondary-silver)] text-transparent bg-clip-text">Expert</span>
           </h1>
           <h2 className="text-2xl md:text-3xl font-semibold text-gray-800">
