@@ -535,7 +535,7 @@ export default function SwakaayaHeroStats() {
         {/* Background Image */}
         <div className="absolute inset-0">
           <img
-            src="fa-im.png"
+            src="banner-image.jpg"
             alt="Fitness Background"
             className="w-full h-full object-cover"
           />
