@@ -262,34 +262,35 @@ const ThreeImageCarousel = () => {
   const images: ImageItem[] = [
     {
       id: 1,
-      src: "/fat-loss5.jpg",
-      alt: "Skin treatment before after result 1"
-    },
-    {
-      id: 2,
-      src: "/fat-loss2.png",
-      alt: "Skin treatment before after result 2"
-    },
-    {
-      id: 3,
-      src: "/fat-loss1.webp",
-      alt: "Skin treatment before after result 3"
-    },
-    {
-      id: 4,
       src: "/fat-loss4.webp",
       alt: "Skin treatment before after result 4"
     },
     {
-      id: 5,
+      id: 2,
       src: "/fat-loss6.webp",
       alt: "Skin treatment before after result 5"
     },
     {
-      id: 6,
+      id: 3,
       src: "/indian-woman.jpg",
       alt: "Skin treatment before after result 5"
     },
+    {
+      id: 4,
+      src: "/fat-loss5.jpg",
+      alt: "Skin treatment before after result 1"
+    },
+    {
+      id: 5,
+      src: "/fat-loss2.png",
+      alt: "Skin treatment before after result 2"
+    },
+    {
+      id: 6,
+      src: "/fat-loss1.webp",
+      alt: "Skin treatment before after result 3"
+    },
+
   ];
 
   // Check screen size on mount and resize

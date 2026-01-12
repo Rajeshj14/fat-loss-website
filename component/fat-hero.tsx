@@ -517,6 +517,7 @@
 //   );
 // }
 
+"use client"
 import React from "react";
 import {
   Phone,
@@ -583,7 +584,7 @@ export default function SwakaayaHeroStats() {
 
               {/* CTAs */}
               <div className="flex flex-col sm:flex-row gap-4 pt-4 max-sm:gap-3 max-sm:pb-6">
-                <button className="group w-full sm:w-auto px-8 py-5 text-gray-900 text-lg font-bold rounded-2xl transition-all hover:scale-105 max-sm:px-4 max-sm:py-3 max-sm:text-sm" style={{ background: "linear-gradient(to right, #d4ad5f, #e0c080)", boxShadow: "0 20px 60px rgba(212, 173, 95, 0.6)" }}>
+                <button onClick={() => document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })} className="group w-full sm:w-auto px-8 py-5 text-gray-900 text-lg font-bold rounded-2xl transition-all hover:scale-105 max-sm:px-4 max-sm:py-3 max-sm:text-sm" style={{ background: "linear-gradient(to right, #d4ad5f, #e0c080)", boxShadow: "0 20px 60px rgba(212, 173, 95, 0.6)" }}>
                   <span className="flex items-center justify-center gap-2">
                     Book Your Appointment
                     <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform max-sm:w-4 max-sm:h-4" />
