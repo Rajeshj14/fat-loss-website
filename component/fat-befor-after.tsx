@@ -262,14 +262,14 @@ const ThreeImageCarousel = () => {
   const images: ImageItem[] = [
     {
       id: 1,
-      src: "/fat-loss4.webp",
+      src: "/fat_loss_before_after.jpg",
       alt: "Skin treatment before after result 4"
     },
-    {
-      id: 2,
-      src: "/fat-loss6.webp",
-      alt: "Skin treatment before after result 5"
-    },
+    // {
+    //   id: 2,
+    //   src: "/fat-loss6.webp",
+    //   alt: "Skin treatment before after result 5"
+    // },
     {
       id: 3,
       src: "/indian-woman.jpg",
@@ -277,7 +277,7 @@ const ThreeImageCarousel = () => {
     },
     {
       id: 4,
-      src: "/fat-loss5.jpg",
+      src: "/fat-loss7.webp",
       alt: "Skin treatment before after result 1"
     },
     {

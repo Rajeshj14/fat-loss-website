@@ -139,6 +139,8 @@ import React, { useState, useEffect } from 'react';
 
 export default function DoctorProfile() {
   const [isVisible, setIsVisible] = useState(false);
+    const [open, setOpen] = useState(false);
+
 
   useEffect(() => {
     setIsVisible(true);
@@ -228,21 +230,61 @@ export default function DoctorProfile() {
           <div className={`space-y-8 transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
             <div className="space-y-6">
               <div className="relative pl-6 border-l-4" style={{ borderColor: '#d4ad5f' }}>
-                <p className="text-gray-700 text-lg leading-relaxed">
+                <p className={`text-gray-700 text-lg leading-relaxed md:max-h-full
+                    ${open ? 'max-h-full' : 'max-h-[6.8rem]'}
+                    overflow-hidden
+                    transition-all duration-300 `}>
                   At Swakaaya Wellness – Skin, Hair & Slimming Clinic, every weight loss and body contouring journey is supervised by our expert lead consultant, bringing years of clinical excellence to Gurgaon. Our medical team is dedicated to providing safe, effective, and result-oriented treatments tailored to your unique body composition.
                 </p>
+                <button
+                  onClick={() => setOpen(!open)}
+                  className="md:hidden mt-2 text-[#d4ad5f] font-semibold text-sm"
+                >
+                  {open ? 'See less' : 'See more'}
+                </button>
               </div>
               
               <div className="bg-gray-50 p-6 rounded-xl border-l-4" style={{ borderColor: '#d4ad5f' }}>
-                <p className="text-gray-700 text-lg leading-relaxed">
+               <p
+                  className={`
+                    text-gray-700 text-lg leading-relaxed
+                    md:max-h-full
+                    ${open ? 'max-h-full' : 'max-h-[6.8rem]'}
+                    overflow-hidden
+                    transition-all duration-300
+                  `}
+                >
                   Our approach to weight management is rooted in clinical precision and ethical practice. Instead of promoting "crash diets," our experts focus on evidence-based protocols that combine advanced fat-reduction technology with metabolic health. Every treatment plan is guided by what is medically appropriate and sustainable for your long-term wellness.
                 </p>
+
+                <button
+                  onClick={() => setOpen(!open)}
+                  className="md:hidden mt-2 text-[#d4ad5f] font-semibold text-sm"
+                >
+                  {open ? 'See less' : 'See more'}
+                </button>
               </div>
               
               <div className="relative pl-6 border-l-4" style={{ borderColor: '#dcdcdc' }}>
-                <p className="text-gray-700 text-lg leading-relaxed">
-                  Known for a patient-centric philosophy, our lead consultant believes that true transformation starts with a thorough medical assessment. This ensures that every client receives realistic expectations, thoughtful guidance, and a customized roadmap to achieving a healthier, more confident version of themselves.
-                </p>
+               <p
+        className={`
+          text-gray-700 text-lg leading-relaxed
+          md:max-h-full
+          ${open ? 'max-h-full' : 'max-h-[7.0rem]'}
+          overflow-hidden
+          transition-all duration-300
+        `}
+      >
+        Known for a patient-centric philosophy, our lead consultant believes that true transformation starts with a thorough medical assessment. This ensures that every client receives realistic expectations, thoughtful guidance, and a customized roadmap to achieving a healthier, more confident version of themselves.
+      </p>
+
+      {/* Mobile only */}
+      <button
+        onClick={() => setOpen(!open)}
+        className="md:hidden mt-2 text-[#d4ad5f] font-semibold text-sm"
+      >
+        {open ? 'See less' : 'See more'}
+      </button>
               </div>
             </div>
 

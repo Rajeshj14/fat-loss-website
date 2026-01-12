@@ -532,7 +532,7 @@ export default function SwakaayaHeroStats() {
   return (
     <div className="">
       {/* Hero Section */}
-      <section className="relative overflow-visible pb-32 mb-20 sm:pb-32 max-sm:pb-20 pt-20 max-sm:pt-10">
+      <section className="relative overflow-visible pb-32 mb-20 sm:pb-32 max-sm:pb-20 pt-20 max-sm:pt-10 max-sm:pr-2 max-sm:pl-2">
         {/* Background Image */}
         <div className="absolute inset-0">
           <img
@@ -552,7 +552,7 @@ export default function SwakaayaHeroStats() {
         {/* Content */}
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:pb-0 max-sm:py-10 flex items-center min-h-[60vh] ">
           <div className="w-full">
-            <div className="max-w-3xl space-y-6 max-sm:space-y-4">
+            <div className="max-w-3xl space-y-6 max-sm:space-y-4 ">
               {/* Badge */}
               <div className="inline-flex items-center gap-2 px-4 max-sm:mb-2 py-2 rounded-full backdrop-blur-md max-sm:px-3 max-sm:py-1.5" style={{ background: "rgba(212, 173, 95, 0.2)", border: "1px solid rgba(212, 173, 95, 0.4)" }}>
                 <Sparkles className="w-4 h-4 max-sm:w-3 max-sm:h-3" style={{ color: "#d4ad5f" }} />
@@ -602,7 +602,7 @@ export default function SwakaayaHeroStats() {
 
         {/* OVERLAPPING Stats Cards */}
         <div className="absolute bottom-0 left-0 right-0 transform translate-y-1/2 z-10">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
             <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 max-sm:gap-3">
               
               {/* Stat 1 */}
