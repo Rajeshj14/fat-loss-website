@@ -14,7 +14,6 @@ export default function PrivacyPolicyPage() {
             </div>
           </div>
           <h1 className="text-4xl font-bold text-gray-800 mb-3">Privacy Policy</h1>
-          <p className="text-gray-600">Last updated: January 9, 2026</p>
         </div>
 
         {/* Introduction */}
@@ -182,8 +181,8 @@ export default function PrivacyPolicyPage() {
             </div>
             <p className="text-gray-700 leading-relaxed">
               If you have any questions about this Privacy Policy, please contact us at{' '}
-              <a href="mailto:privacy@example.com" className="font-semibold hover:underline" style={{ color: '#d4ad5f' }}>
-                privacy@example.com
+              <a href="mailto:swakaayawellness@gmail.com" className="font-semibold hover:underline" style={{ color: '#d4ad5f' }}>
+               swakaayawellness@gmail.com
               </a>
             </p>
           </div>
