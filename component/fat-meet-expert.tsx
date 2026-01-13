@@ -154,7 +154,7 @@ export default function DoctorProfile() {
           <h1 className="text-2xl md:text-4xl font-bold max-sm:mb-2 mb-4">
             Meet the <span className="bg-gradient-to-t from-[var(--primary-gold)] to-[var(--secondary-silver)] text-transparent bg-clip-text">Expert</span>
           </h1>
-          <h2 className="text-xl md:text-2xl font-semibold text-gray-800">
+          <h2 className="text-2xl md:text-2xl font-semibold text-gray-800">
             Dr. Neha Thukral: Leading the Way in Scientific Weight Loss
           </h2>
         </div>
