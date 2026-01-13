@@ -558,7 +558,7 @@ const ThreeImageCarousel = () => {
               <div className="flex justify-center px-8 sm:px-4">
                 {visibleImages.map((image, index) => (
                   <div key={`${image.id}-${index}`} className="w-full max-w-sm flex-shrink-0">
-                    <div className="relative w-full h-80 sm:h-96 rounded-xl overflow-hidden shadow-lg">
+                    <div className="relative w-full h-100 sm:h-96  rounded-xl overflow-hidden shadow-lg">
                       <Image
                         src={image.src}
                         alt={image.alt}
@@ -598,7 +598,7 @@ const ThreeImageCarousel = () => {
               <div className="grid grid-cols-3 gap-4 md:gap-6 px-2">
                 {visibleImages.map((image, index) => (
                   <div key={`${image.id}-${index}`} className="w-full">
-                    <div className="relative w-full h-72 md:h-80 lg:h-96 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 group">
+                    <div className="relative w-full h-72 md:h-80 lg:h-110 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 group">
                       <Image
                         src={image.src}
                         alt={image.alt}
