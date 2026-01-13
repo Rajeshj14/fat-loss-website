@@ -9,6 +9,7 @@ import {
   Users,
   Shield,
 } from "lucide-react";
+import Image from "next/image";
 
 export default function SwakaayaHeroStats() {
   return (
@@ -17,10 +18,12 @@ export default function SwakaayaHeroStats() {
       <section className="relative overflow-visible pb-32 mb-20 sm:pb-32 max-sm:pb-20 pt-20 max-sm:pt-10 max-sm:pr-2 max-sm:pl-2">
         {/* Background Image */}
         <div className="absolute inset-0">
-          <img
-            src="ban-img3.jpg"
+          <Image
+            src="/ban-img3.jpg"
             alt="Fitness Background"
-            className="w-full h-full object-cover"
+            fill
+            className="w-full h-full object-contain"
+            priority
           />
           <div className="absolute inset-0 bg-gradient-to-r from-gray-900/95 via-gray-900/85 to-gray-900/70"></div>
           
