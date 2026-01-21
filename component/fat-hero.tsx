@@ -158,8 +158,7 @@ export default function SwakaayaHeroStats() {
                   }
                   className="group w-full sm:flex-1 px-6 py-4 text-gray-900 text-lg font-bold rounded-xl transition-all hover:scale-[1.02] max-sm:px-4 max-sm:py-3 max-sm:text-sm"
                   style={{
-                    background: "linear-gradient(to right, #d4ad5f, #e0c080)",
-                    boxShadow: "0 10px 30px rgba(212, 173, 95, 0.4)",
+                    background: "#d4ad5f",
                   }}
                 >
                   <span className="flex items-center justify-center gap-2">
@@ -297,7 +296,7 @@ export default function SwakaayaHeroStats() {
               <div className="group">
                 <div className="relative">
                   <div
-                    className="absolute inset-0 rounded-3xl blur-xl opacity-50 group-hover:opacity-75 transition-opacity max-sm:rounded-xl max-sm:blur-lg"
+                    className="absolute rounded-3xl blur-xl opacity-50 group-hover:opacity-75 transition-opacity max-sm:rounded-xl max-sm:blur-lg"
                     style={{
                       background: "linear-gradient(to bottom right, #d4ad5f, #e0c080)",
                     }}
@@ -332,7 +331,7 @@ export default function SwakaayaHeroStats() {
               <div className="group">
                 <div className="relative">
                   <div
-                    className="absolute inset-0 rounded-3xl blur-xl opacity-50 group-hover:opacity-75 transition-opacity max-sm:rounded-xl max-sm:blur-lg"
+                    className="absolute rounded-3xl blur-xl opacity-50 group-hover:opacity-75 transition-opacity max-sm:rounded-xl max-sm:blur-lg"
                     style={{
                       background: "linear-gradient(to bottom right, #d4ad5f, #e0c080)",
                     }}
@@ -367,7 +366,7 @@ export default function SwakaayaHeroStats() {
               <div className="group">
                 <div className="relative">
                   <div
-                    className="absolute inset-0 rounded-3xl blur-xl opacity-50 group-hover:opacity-75 transition-opacity max-sm:rounded-xl max-sm:blur-lg"
+                    className="absolute rounded-3xl blur-xl opacity-50 group-hover:opacity-75 transition-opacity max-sm:rounded-xl max-sm:blur-lg"
                     style={{
                       background: "linear-gradient(to bottom right, #d4ad5f, #e0c080)",
                     }}
@@ -402,7 +401,7 @@ export default function SwakaayaHeroStats() {
               <div className="group">
                 <div className="relative">
                   <div
-                    className="absolute inset-0 rounded-3xl blur-xl opacity-50 group-hover:opacity-75 transition-opacity max-sm:rounded-xl max-sm:blur-lg"
+                    className="absolute rounded-3xl blur-xl opacity-50 group-hover:opacity-75 transition-opacity max-sm:rounded-xl max-sm:blur-lg"
                     style={{
                       background: "linear-gradient(to bottom right, #d4ad5f, #e0c080)",
                     }}
