@@ -61,7 +61,21 @@ export default function SwakaayaHeroStats() {
     <div className="">
       <section className="relative overflow-visible pb-32 mb-20 sm:pb-32 max-sm:pb-20 pt-20 max-sm:pt-10 max-sm:pr-2 max-sm:pl-2">
         {/* Background Image */}
-        <div className="absolute w-full aspect-[2/1] inset-0">
+        {/* <div className="absolute w-full aspect-[2/1] max-sm:aspect-[20/56] inset-0"> */}
+        <div className="absolute w-full 
+            // Mobile (default) - taller aspect ratio
+            max-sm:aspect-[20/56] 
+            // Small screens - slightly less tall
+            sm:aspect-[20/52.3]
+            // Medium screens - more balanced
+            md:aspect-[4/6.7]
+            // Large screens - widescreen
+            lg:aspect-[2/1.5]
+            // Extra large - ultra widescreen
+            xl:aspect-[0]
+            // 2XL - cinema widescreen
+            2xl:aspect-[2/1]
+            inset-0"> 
           <Image
             src="/banner-images1.jpg"
             alt="Fitness Transformation"
@@ -188,7 +202,7 @@ export default function SwakaayaHeroStats() {
               className="relative rounded-xl overflow-hidden mx-auto" 
               
             >
-              <div className="relative" style={{ width: "400px", height: "450px", margin: "0 auto" }}>
+              <div className="relative hero-video">
                 {/* Video Element */}
                 <video
                   ref={videoRef}
@@ -202,7 +216,7 @@ export default function SwakaayaHeroStats() {
                 </video>
                 
                 {/* Video Controls Bar - Top Right */}
-                <div className="absolute top-4 right-4 flex gap-2 z-20">
+                <div className="absolute top-4 right-5 max-sm:mr-15 flex gap-2 z-20 mar">
                   {/* Mute/Unmute Button */}
                   <button
                     onClick={toggleMute}

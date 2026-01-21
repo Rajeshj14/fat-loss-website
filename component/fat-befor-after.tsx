@@ -178,7 +178,7 @@ const ThreeImageCarousel = () => {
   const visibleImages = getVisibleImages();
 
   return (
-    <div className="w-full max-w-7xl mx-auto px-2 sm:px-4 md:px-6 py-8 md:py-12 max-sm:mt-22">
+    <div className="w-full max-w-7xl mx-auto px-2 sm:px-4 md:px-6 py-8 md:py-10 max-sm:mt-0">
       {/* Header */}
       <div className="text-center max-sm:mb-2 mb-8">
         <h1 className="text-2xl md:text-4xl font-bold text-black max-sm:mb-0 mb-3">

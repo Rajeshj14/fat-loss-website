@@ -33,3 +33,36 @@ body {
 body {
   font-family: var(--font-outfit);
 }
+
+@media (max-width: 426.98px) {
+    .video-section{
+      margin-top: 140px;
+    }
+    .hero-video{
+   width: 300px;
+
+    }
+    .mar{
+      margin-right: 15px;
+    }
+}
+@media (max-width: 376.98px) {
+    .video-section{
+      margin-top: 100px;
+    }
+    .mar{
+      margin-right: 60px;
+    }
+}
+@media (max-width: 321.98px) {
+    .hero-video{
+      width: 200px;
+      height: 350px;
+
+    }
+}
+.hero-video{
+   width: 400px;
+   height: 450px;
+   margin: 0 auto;
+}
