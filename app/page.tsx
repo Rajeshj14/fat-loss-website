@@ -17,7 +17,7 @@ export default function Home() {
     <div>
       <Navbar />
       <SwakaayaHeroStats />
-      {/* <VideoCarousel /> */}
+      <VideoCarousel />
       <ThreeImageCarousel />
       <AboutSection />
       <TreatmentSolutions />

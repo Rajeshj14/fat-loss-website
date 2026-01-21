@@ -42,7 +42,7 @@ export default function TreatmentSolutions() {
         {/* Section Header */}
         <div className="text-center max-sm:mb-3 mb-8 lg:mb-8 animate-fade-in-up">
           <h2 className="text-2xl sm:text-4xl lg:text-4xl font-extrabold max-sm:mb-0 mb-4">
-            Targeted Solutions for <span className="bg-gradient-to-t from-[var(--primary-gold)] to-[var(--secondary-silver)] text-transparent bg-clip-text">Every Body Goal</span>
+            Targeted Solutions for <span className="bg-[var(--primary-gold)] text-transparent bg-clip-text">Every Body Goal</span>
           </h2>
           <p className="text-lg sm:text-xl max-w-3xl mx-auto">
             Core Specializations
@@ -82,12 +82,6 @@ export default function TreatmentSolutions() {
                     <h3 className="text-lg font-bold text-white mb-2 transition-all duration-300 group-hover:translate-x-1">
                       {treatment.title}
                     </h3>
-
-                    {/* Arrow */}
-                    <div className="flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-all duration-300">
-                      <span className="text-sm font-semibold" style={{color: '#d4ad5f'}}>Learn More</span>
-                      <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" style={{color: '#d4ad5f'}} />
-                    </div>
                   </div>
 
                   {/* Glow Effect on Hover */}
@@ -100,13 +94,6 @@ export default function TreatmentSolutions() {
 
         {/* CTA Button */}
         <div className="text-center animate-fade-in-up" style={{animationDelay: '0.5s'}}>
-          {/* <button onClick={() => document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })} className="group relative px-8 sm:px-10 lg:px-12 py-4 sm:py-5 text-gray-900 text-lg sm:text-xl font-extrabold rounded-2xl overflow-hidden transition-all duration-300 hover:scale-105 animate-shimmer-bg bg-gradient-to-t from-[var(--primary-gold)] to-[var(--secondary-silver)]">
-            <span className="relative z-10 flex items-center justify-center gap-3 text-white">
-              Find Your Personalized Treatment Plan
-              <ArrowRight className="w-5 lg:w-6 h-5 lg:h-6 group-hover:translate-x-2 transition-transform duration-300" />
-            </span>
-           
-          </button> */}
           <button onClick={() => document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })}
               className="bg-gradient-to-t from-[var(--primary-gold)] to-[var(--secondary-silver)] text-white px-8 py-4 rounded-full font-semibold text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 hover:opacity-95 group relative overflow-hidden"
             >

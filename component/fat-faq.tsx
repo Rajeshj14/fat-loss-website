@@ -66,7 +66,7 @@ export default function FAQ() {
       <div className="max-w-6xl mx-auto">
         <h1 className="text-2xl md:text-4xl font-bold text-center max-sm:mb-4 mb-12">
           Frequently Asked
-          <span className="bg-gradient-to-t from-[var(--primary-gold)] to-[var(--secondary-silver)] text-transparent bg-clip-text">
+          <span className="bg-[var(--primary-gold)] text-transparent bg-clip-text">
             {" "}
             Questions
           </span>

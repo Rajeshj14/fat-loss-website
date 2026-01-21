@@ -35,7 +35,7 @@ const AboutSection = () => {
           <div className="space-y-8">
             <div className="space-y-4 mb-[10px] max-sm:mb-1">
               <div className="inline-block max-sm:mb-2">
-                <span className="bg-gradient-to-t from-[var(--primary-gold)] to-[var(--secondary-silver)] bg-clip-text text-transparent font-bold text-sm tracking-wider uppercase lg:text-3xl text-2xl">
+                <span className="bg-[var(--primary-gold)] bg-clip-text text-transparent font-bold text-sm tracking-wider uppercase lg:text-3xl text-2xl">
                   Where Science Meets Wellness
                 </span>
                 <div className="h-1 w-20 bg-gradient-to-r from-[var(--primary-gold)] to-[var(--secondary-silver)] rounded-full mt-2"></div>
@@ -43,7 +43,7 @@ const AboutSection = () => {
 
               <h2 className="text-4xl md:text-4xl font-bold text-gray-900 leading-tight max-sm:mb-0">
                 Premium Skin, Hair & Slimming Solutions in{' '}
-                <span className="bg-gradient-to-t from-[var(--primary-gold)] to-[var(--secondary-silver)] bg-clip-text text-transparent">
+                <span className="bg-[var(--primary-gold)] bg-clip-text text-transparent">
                   Gurgaon
                 </span>
               </h2>

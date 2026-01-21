@@ -4,7 +4,7 @@ import { Menu, Phone, X } from 'lucide-react';
 import Image from 'next/image';
 import { useState } from 'react';
 
-const Navbar = () => {
+const     Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const navLinks = [

@@ -106,7 +106,7 @@ export default function SwakayaaFeatures() {
         >
           <h1 className="text-2xl md:text-4xl font-bold max-sm:mb-3 mb-4">
             What Sets
-            <span className="bg-gradient-to-t from-[var(--primary-gold)] to-[var(--secondary-silver)] text-transparent bg-clip-text">
+            <span className="bg-[var(--primary-gold)] text-transparent bg-clip-text">
               {" "}
               Swakaaya Apart
             </span>
