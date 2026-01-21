@@ -33,14 +33,11 @@ body {
 body {
   font-family: var(--font-outfit);
 }
-/* Default (Desktop First) */
 .hero-video {
   width: 400px;
   height: 450px;
   margin: 0 auto;
 }
-
-/* Large Mobiles (iPhone Pro, etc.) */
 @media (max-width: 426px) {
   .hero-video {
     width: 377px;
@@ -55,8 +52,6 @@ body {
     margin-right: 0px;
   }
 }
-
-/* Medium Mobiles */
 @media (max-width: 376px) {
   .hero-video {
     width: 326px;
@@ -68,17 +63,14 @@ body {
   }
 
   .mar {
-    margin-right: 0px; /* fixed typo (was 60cv ❌) */
+    margin-right: 0px;
   }
 }
-
-/* Small Mobiles (iPhone SE etc.) */
 @media (max-width: 321px) {
   .hero-video {
     width: 220px;
     height: 300px;
   }
-
   .video-section {
     margin-top: 90px;
   }
