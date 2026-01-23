@@ -33,32 +33,6 @@ const Footer = () => {
               Transform your body and life with our science-backed, doctor-led fat loss
               programs. Your journey to a healthier you starts here.
             </p>
-            <div className="flex gap-4">
-              <a
-                href="#"
-                className="bg-gray-800 w-10 h-10 rounded-full flex items-center justify-center hover:bg-gradient-to-r hover:from-[var(--primary-gold)] to-[var(--secondary-silver)] transition-all duration-300"
-              >
-                <Facebook size={20} />
-              </a>
-              <a
-                href="#"
-                className="bg-gray-800 w-10 h-10 rounded-full flex items-center justify-center hover:bg-gradient-to-r hover:from-[var(--primary-gold)] to-[var(--secondary-silver)] transition-all duration-300"
-              >
-                <Instagram size={20} />
-              </a>
-              {/* <a
-                href="#"
-                className="bg-gray-800 w-10 h-10 rounded-full flex items-center justify-center hover:bg-gradient-to-r hover:from-[var(--primary-gold)] to-[var(--secondary-silver)] transition-all duration-300"
-              >
-                <Twitter size={20} />
-              </a>
-              <a
-                href="#"
-                className="bg-gray-800 w-10 h-10 rounded-full flex items-center justify-center hover:bg-gradient-to-r hover:from-[var(--primary-gold)] to-[var(--secondary-silver)] transition-all duration-300"
-              >
-                <Linkedin size={20} />
-              </a> */}
-            </div>
           </div>
 
           {/* Quick Links */}
@@ -81,14 +55,6 @@ const Footer = () => {
                   About Us
                 </button>
               </li>
-              {/* <li>
-                <button
-                  onClick={() => scrollToSection('#programs')}
-                  className="text-gray-400 hover:text-[var(--primary-gold)] transition-colors"
-                >
-                  Programs
-                </button>
-              </li> */}
               <li>
                 <button
                   onClick={() => scrollToSection('#faq')}
@@ -120,13 +86,6 @@ const Footer = () => {
                 </div>
               </li>
               <li className="flex items-start gap-3">
-                <Mail className="text-[var(--primary-gold)] flex-shrink-0 mt-1" size={18} />
-                <div>
-                  <a href="mailto:swakaayawellness@gmail.com" className="text-gray-400 hover:text-[var(--primary-gold)]">swakaayawellness@gmail.com</a>
-                  <p className="text-gray-500 text-sm">24/7 Email Support</p>
-                </div>
-              </li>
-              <li className="flex items-start gap-3">
                 <MapPin className="text-[var(--primary-gold)] flex-shrink-0 mt-1" size={18} />
                 <div>
                   <p className="text-gray-400">4306, Ground Floor,</p>
@@ -142,7 +101,7 @@ const Footer = () => {
 
             <div className="mt-6">
               <button onClick={() => document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })}
-              className="bg-gradient-to-t from-[var(--primary-gold)] to-[var(--secondary-silver)] text-white px-8 py-4 rounded-full font-semibold text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 hover:opacity-95 group relative overflow-hidden"
+              className="bg-[var(--primary-gold)] text-white px-8 py-4 rounded-full font-semibold text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 hover:opacity-95 group relative overflow-hidden"
             >
               <span className="relative z-10 flex items-center justify-center gap-2">
                 {/* <UserCircle className="w-5 h-5" /> */}
@@ -177,7 +136,7 @@ const Footer = () => {
         <div className="border-t border-gray-800 max-sm:pt-1 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 max-sm:gap-1 max-sm:pt-4">
             <p className="text-gray-400 text-sm text-center max-sm:pt-1 md:text-left">
-              &copy; {currentYear} FitLife Agency. All rights reserved.
+              &copy; {currentYear} Swakaaya Wellness Clinic. All rights reserved.
             </p>
             <div className="flex gap-6 text-sm">
               <a href="/privacy-policy" className="text-gray-400 hover:text-[var(--primary-gold)] transition-colors">

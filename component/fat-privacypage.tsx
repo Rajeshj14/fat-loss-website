@@ -9,8 +9,8 @@ export default function PrivacyPolicyPage() {
         {/* Header */}
         <div className="text-center mb-12">
           <div className="flex justify-center mb-4">
-            <div className="rounded-full p-4" style={{ backgroundColor: '#d4ad5f20' }}>
-              <Shield className="w-12 h-12" style={{ color: '#d4ad5f' }} />
+            <div className="rounded-full p-4" style={{ backgroundColor: '#ba736b20' }}>
+              <Shield className="w-12 h-12" style={{ color: '#ba736b' }} />
             </div>
           </div>
           <h1 className="text-4xl font-bold text-gray-800 mb-3">Privacy Policy</h1>
@@ -29,7 +29,7 @@ export default function PrivacyPolicyPage() {
         {/* Section 1 */}
         <div className="mb-8">
           <div className="flex items-start gap-3 mb-3">
-            <FileText className="w-6 h-6 mt-1 flex-shrink-0" style={{ color: '#d4ad5f' }} />
+            <FileText className="w-6 h-6 mt-1 flex-shrink-0" style={{ color: '#ba736b' }} />
             <h2 className="text-2xl font-semibold text-gray-800">Information We Collect</h2>
           </div>
           <div className="ml-9">
@@ -38,19 +38,19 @@ export default function PrivacyPolicyPage() {
             </p>
             <ul className="space-y-2 text-gray-700">
               <li className="flex gap-2">
-                <span style={{ color: '#d4ad5f' }}>•</span>
+                <span style={{ color: '#ba736b' }}>•</span>
                 <span>Personal identification information (name, email address, phone number)</span>
               </li>
               <li className="flex gap-2">
-                <span style={{ color: '#d4ad5f' }}>•</span>
+                <span style={{ color: '#ba736b' }}>•</span>
                 <span>Payment and billing information</span>
               </li>
               <li className="flex gap-2">
-                <span style={{ color: '#d4ad5f' }}>•</span>
+                <span style={{ color: '#ba736b' }}>•</span>
                 <span>Communication preferences and feedback</span>
               </li>
               <li className="flex gap-2">
-                <span style={{ color: '#d4ad5f' }}>•</span>
+                <span style={{ color: '#ba736b' }}>•</span>
                 <span>Usage data and analytics</span>
               </li>
             </ul>
@@ -60,7 +60,7 @@ export default function PrivacyPolicyPage() {
         {/* Section 2 */}
         <div className="mb-8">
           <div className="flex items-start gap-3 mb-3">
-            <Eye className="w-6 h-6 mt-1 flex-shrink-0" style={{ color: '#d4ad5f' }} />
+            <Eye className="w-6 h-6 mt-1 flex-shrink-0" style={{ color: '#ba736b' }} />
             <h2 className="text-2xl font-semibold text-gray-800">How We Use Your Information</h2>
           </div>
           <div className="ml-9">
@@ -69,23 +69,23 @@ export default function PrivacyPolicyPage() {
             </p>
             <ul className="space-y-2 text-gray-700">
               <li className="flex gap-2">
-                <span style={{ color: '#d4ad5f' }}>•</span>
+                <span style={{ color: '#ba736b' }}>•</span>
                 <span>Provide, maintain, and improve our services</span>
               </li>
               <li className="flex gap-2">
-                <span style={{ color: '#d4ad5f' }}>•</span>
+                <span style={{ color: '#ba736b' }}>•</span>
                 <span>Process transactions and send related information</span>
               </li>
               <li className="flex gap-2">
-                <span style={{ color: '#d4ad5f' }}>•</span>
+                <span style={{ color: '#ba736b' }}>•</span>
                 <span>Send you technical notices and support messages</span>
               </li>
               <li className="flex gap-2">
-                <span style={{ color: '#d4ad5f' }}>•</span>
+                <span style={{ color: '#ba736b' }}>•</span>
                 <span>Respond to your comments and questions</span>
               </li>
               <li className="flex gap-2">
-                <span style={{ color: '#d4ad5f' }}>•</span>
+                <span style={{ color: '#ba736b' }}>•</span>
                 <span>Protect against fraudulent or illegal activity</span>
               </li>
             </ul>
@@ -95,7 +95,7 @@ export default function PrivacyPolicyPage() {
         {/* Section 3 */}
         <div className="mb-8">
           <div className="flex items-start gap-3 mb-3">
-            <Lock className="w-6 h-6 mt-1 flex-shrink-0" style={{ color: '#d4ad5f' }} />
+            <Lock className="w-6 h-6 mt-1 flex-shrink-0" style={{ color: '#ba736b' }} />
             <h2 className="text-2xl font-semibold text-gray-800">Data Security</h2>
           </div>
           <div className="ml-9">
@@ -111,7 +111,7 @@ export default function PrivacyPolicyPage() {
         {/* Section 4 */}
         <div className="mb-8">
           <div className="flex items-start gap-3 mb-3">
-            <FileText className="w-6 h-6 mt-1 flex-shrink-0" style={{ color: '#d4ad5f' }} />
+            <FileText className="w-6 h-6 mt-1 flex-shrink-0" style={{ color: '#ba736b' }} />
             <h2 className="text-2xl font-semibold text-gray-800">Your Rights</h2>
           </div>
           <div className="ml-9">
@@ -120,23 +120,23 @@ export default function PrivacyPolicyPage() {
             </p>
             <ul className="space-y-2 text-gray-700">
               <li className="flex gap-2">
-                <span style={{ color: '#d4ad5f' }}>•</span>
+                <span style={{ color: '#ba736b' }}>•</span>
                 <span>Access and receive a copy of your personal data</span>
               </li>
               <li className="flex gap-2">
-                <span style={{ color: '#d4ad5f' }}>•</span>
+                <span style={{ color: '#ba736b' }}>•</span>
                 <span>Request correction of inaccurate data</span>
               </li>
               <li className="flex gap-2">
-                <span style={{ color: '#d4ad5f' }}>•</span>
+                <span style={{ color: '#ba736b' }}>•</span>
                 <span>Request deletion of your personal data</span>
               </li>
               <li className="flex gap-2">
-                <span style={{ color: '#d4ad5f' }}>•</span>
+                <span style={{ color: '#ba736b' }}>•</span>
                 <span>Object to or restrict processing of your data</span>
               </li>
               <li className="flex gap-2">
-                <span style={{ color: '#d4ad5f' }}>•</span>
+                <span style={{ color: '#ba736b' }}>•</span>
                 <span>Withdraw consent at any time</span>
               </li>
             </ul>
@@ -146,7 +146,7 @@ export default function PrivacyPolicyPage() {
         {/* Section 5 */}
         <div className="mb-8">
           <div className="flex items-start gap-3 mb-3">
-            <FileText className="w-6 h-6 mt-1 flex-shrink-0" style={{ color: '#d4ad5f' }} />
+            <FileText className="w-6 h-6 mt-1 flex-shrink-0" style={{ color: '#ba736b' }} />
             <h2 className="text-2xl font-semibold text-gray-800">Cookies and Tracking</h2>
           </div>
           <div className="ml-9">
@@ -161,7 +161,7 @@ export default function PrivacyPolicyPage() {
         {/* Section 6 */}
         <div className="mb-10">
           <div className="flex items-start gap-3 mb-3">
-            <FileText className="w-6 h-6 mt-1 flex-shrink-0" style={{ color: '#d4ad5f' }} />
+            <FileText className="w-6 h-6 mt-1 flex-shrink-0" style={{ color: '#ba736b' }} />
             <h2 className="text-2xl font-semibold text-gray-800">Changes to This Policy</h2>
           </div>
           <div className="ml-9">
@@ -174,14 +174,14 @@ export default function PrivacyPolicyPage() {
 
         <div className="border-t pt-8" style={{ borderColor: '#dcdcdc' }}>
           {/* Contact Section */}
-          <div className="rounded-xl p-6" style={{ backgroundColor: '#d4ad5f10' }}>
+          <div className="rounded-xl p-6" style={{ backgroundColor: '#ba736b10' }}>
             <div className="flex items-center gap-3 mb-3">
-              <Mail className="w-6 h-6" style={{ color: '#d4ad5f' }} />
+              <Mail className="w-6 h-6" style={{ color: '#ba736b' }} />
               <h3 className="text-xl font-semibold text-gray-800">Contact Us</h3>
             </div>
             <p className="text-gray-700 leading-relaxed">
               If you have any questions about this Privacy Policy, please contact us at{' '}
-              <a href="mailto:swakaayawellness@gmail.com" className="font-semibold hover:underline" style={{ color: '#d4ad5f' }}>
+              <a href="mailto:swakaayawellness@gmail.com" className="font-semibold hover:underline" style={{ color: '#ba736b' }}>
                swakaayawellness@gmail.com
               </a>
             </p>
@@ -191,7 +191,7 @@ export default function PrivacyPolicyPage() {
         {/* Back Button */}
         <div className="mt-8 text-center">
           <a href='/'
-              className="bg-gradient-to-t from-[var(--primary-gold)] to-[var(--secondary-silver)] text-white px-8 py-4 rounded-full font-semibold text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 hover:opacity-95 group relative overflow-hidden"
+              className="bg-[var(--primary-gold)] text-white px-8 py-4 rounded-full font-semibold text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 hover:opacity-95 group relative overflow-hidden"
             >
               {/* <span className="relative z-10 flex items-center justify-center gap-2"> */}
                 {/* <UserCircle className="w-5 h-5" /> */}

@@ -3,8 +3,8 @@
 :root {
   /* --background: #ffffff;
   --foreground: #171717; */
-  --primary-gold: #d4ad5f;
-  --secondary-silver: #dcdcdc;
+  --primary-gold: #ba736b;
+  --secondary-silver: #161f2f;
 }
 
 /* @theme inline {
@@ -32,46 +32,4 @@ body {
 
 body {
   font-family: var(--font-outfit);
-}
-.hero-video {
-  width: 400px;
-  height: 450px;
-  margin: 0 auto;
-}
-@media (max-width: 426px) {
-  .hero-video {
-    width: 377px;
-    height: 457px;
-  }
-
-  .video-section {
-    margin-top: 120px;
-  }
-
-  .mar {
-    margin-right: 0px;
-  }
-}
-@media (max-width: 376px) {
-  .hero-video {
-    width: 326px;
-    height: 398px;
-  }
-
-  .video-section {
-    margin-top: 100px;
-  }
-
-  .mar {
-    margin-right: 0px;
-  }
-}
-@media (max-width: 321px) {
-  .hero-video {
-    width: 220px;
-    height: 300px;
-  }
-  .video-section {
-    margin-top: 90px;
-  }
 }

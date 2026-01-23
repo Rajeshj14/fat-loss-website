@@ -31,11 +31,11 @@ const ThreeImageCarousel = () => {
       src: "/fatlose.jpeg",
       alt: "Skin treatment before after result 1"
     },
-    {
-      id: 6,
-      src: "/fat-loss1.webp",
-      alt: "Skin treatment before after result 3"
-    },
+    // {
+    //   id: 6,
+    //   src: "/fat-loss1.webp",
+    //   alt: "Skin treatment before after result 3"
+    // },
   ];
 
   // Create extended images array for seamless looping (add first few images to the end)
@@ -178,7 +178,8 @@ const ThreeImageCarousel = () => {
   const visibleImages = getVisibleImages();
 
   return (
-    <div className="w-full max-w-7xl mx-auto px-2 sm:px-4 md:px-6 py-8 md:py-10 max-sm:mt-0">
+    <div className='bg-gradient-to-br from-gray-50 via-white to-gray-100'>
+    <div className="bg-gradient-to-br from-gray-50 via-white to-gray-100 w-full max-w-7xl mx-auto px-2 sm:px-4 md:px-6 py-8 md:py-10 max-sm:mt-0">
       {/* Header */}
       <div className="text-center max-sm:mb-2 mb-8">
         <h1 className="text-2xl md:text-4xl font-bold text-black max-sm:mb-0 mb-3">
@@ -300,12 +301,13 @@ const ThreeImageCarousel = () => {
             key={index}
             onClick={() => goToSlide(index)}
             className={`transition-all duration-300 ${index === currentIndex 
-              ? 'w-6 h-1.5 sm:w-8 sm:h-2 bg-[#d4ad5f] rounded-full' 
+              ? 'w-6 h-1.5 sm:w-8 sm:h-2 bg-[#ba736b] rounded-full' 
               : 'w-1.5 h-1.5 sm:w-2 sm:h-2 bg-gray-300 rounded-full hover:bg-gray-400'}`}
             aria-label={`Go to slide ${index + 1}`}
           />
         ))}
       </div>
+    </div>
     </div>
   );
 };

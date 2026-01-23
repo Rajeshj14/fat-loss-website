@@ -24,26 +24,26 @@ const AboutSection = () => {
     {
       icon: Target,
       text: 'Designed for Urban Life',
-      description: 'Zero-downtime treatments that fit seamlessly into Gurgaon’s busy schedules.'
+      description: 'Zero-downtime treatments that fit seamlessly into Gurgaon\'s busy schedules.'
     },
   ];
 
   return (
-    <section id='#about' className="py-15 max-sm:py-8 max-sm:py-8 px-4 sm:py-10 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-50 via-white to-gray-100">
+    <section id='about' className="py-15 max-sm:py-8 px-4 sm:py-10 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-50 via-white to-gray-100">
       <div className="max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-2 max-sm:gap-6 gap-12 items-center">
           <div className="space-y-8">
             <div className="space-y-4 mb-[10px] max-sm:mb-1">
               <div className="inline-block max-sm:mb-2">
-                <span className="bg-[var(--primary-gold)] bg-clip-text text-transparent font-bold text-sm tracking-wider uppercase lg:text-3xl text-2xl">
+                <span className="bg-[#ba736b] bg-clip-text text-transparent font-bold text-sm tracking-wider uppercase lg:text-3xl text-2xl">
                   Where Science Meets Wellness
                 </span>
-                <div className="h-1 w-20 bg-gradient-to-r from-[var(--primary-gold)] to-[var(--secondary-silver)] rounded-full mt-2"></div>
+                <div className="h-1 w-20 bg-gradient-to-r from-[#ba736b] rounded-full mt-2"></div>
               </div>
 
-              <h2 className="text-4xl md:text-4xl font-bold text-gray-900 leading-tight max-sm:mb-0">
+              <h2 className="text-2xl md:text-4xl font-bold text-gray-900 leading-tight max-sm:mb-0">
                 Premium Skin, Hair & Slimming Solutions in{' '}
-                <span className="bg-[var(--primary-gold)] bg-clip-text text-transparent">
+                <span className="bg-[#ba736b] bg-clip-text text-transparent">
                   Gurgaon
                 </span>
               </h2>
@@ -53,24 +53,38 @@ const AboutSection = () => {
               Located in the heart of <span className="font-semibold text-gray-800">Gurgaon</span>,
               Swakaaya Wellness is a premier destination for holistic Skin, Hair, and Slimming solutions. We believe that weight loss isn't a "one size fits all" journey. Our clinic combines state-of-the-art medical technology with a compassionate, patient-first approach to help you reach your goal weight safely and sustainably.
             </p>
-            <div className="mb-6 max-sm:mb-4">
-              <h3 className="text-xl font-bold text-gray-800 mb-4 max-sm:mb-2">
+            
+            {/* Bullet Points Section - Nanba Style */}
+            <div className="mb-4 max-sm:mb-4">
+              <h3 className="text-xl font-bold text-gray-800 mb-2 max-sm:mb-4">
                 Why Gurgaon Trusts Swakaaya Aesthetics
               </h3>
-              <div className="grid sm:grid-cols-2 gap-4 max-sm:gap-3 max-sm:gap:1">
+              
+              <div className="space-y-4">
                 {features.map((feature, idx) => (
                   <div
                     key={idx}
-                    className="flex items-start gap-3 p-4 rounded-xl bg-gradient-to-br from-amber-50/50 to-gray-50 border border-amber-100 hover:shadow-md transition-all duration-300 group hover:border-[var(--primary-gold)]"
+                    className="flex items-start gap-4 group hover:transform hover:translate-x-2 transition-all duration-300"
                   >
-                    <div className="flex-shrink-0 w-10 h-10 bg-gradient-to-br from-[var(--primary-gold)] to-[var(--secondary-silver)] rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                      <feature.icon className="w-5 h-5 text-white" />
+                    {/* Bullet Icon */}
+                    <div className="flex-shrink-0">
+                      <div className="relative">
+                        {/* <div className="w-8 h-8 rounded-full bg-gradient-to-r from-[#161f2f] to-[#ba736b] flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                          <feature.icon className="w-4 h-4 text-white" />
+                        </div> */}
+                        <div className="absolute -inset-1 bg-gradient-to-r from-[#ba736b] rounded-full opacity-0 group-hover:opacity-20 blur transition-opacity duration-300"></div>
+                      </div>
                     </div>
-                    <div>
-                      <p className="text-sm font-bold text-gray-800 leading-snug">
-                        {feature.text}
-                      </p>
-                      <p className="text-xs text-gray-600 mt-1 leading-relaxed">
+                    
+                    {/* Content */}
+                    <div className="flex-1">
+                      <div className="flex items-center gap-2 mb-1">
+                        <div className="h-1 w-4 bg-gradient-to-r from-[#ba736b] rounded-full"></div>
+                        <h4 className="text-lg font-bold text-gray-800">
+                          {feature.text}
+                        </h4>
+                      </div>
+                      <p className="text-md text-gray-600 pl-6 leading-relaxed border-l-2 border-gray-200 ml-2 group-hover:border-[#ba736b] transition-colors duration-300">
                         {feature.description}
                       </p>
                     </div>
@@ -79,20 +93,20 @@ const AboutSection = () => {
               </div>
             </div>
 
-            <button onClick={() => document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })}
-              className="bg-gradient-to-t from-[var(--primary-gold)] to-[var(--secondary-silver)] text-white px-8 py-4 rounded-full font-semibold text-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 hover:opacity-95 group relative overflow-hidden"
+            {/* <button onClick={() => document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })}
+              className="bg-[#ba736b] text-white px-8 py-4 rounded-full font-semibold text-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 hover:opacity-95 group relative overflow-hidden"
             >
               <span className="relative z-10 flex items-center justify-center gap-2">
                 <UserCircle className="w-5 h-5" />
-                <span className='block sm:hidden'>  Book Your Consultation</span>
-                <span className='hidden sm:block'>  Book Your Doctor-Led Weight Loss Consultation</span>
-               
+                <span className='block sm:hidden'>Book Your Consultation</span>
+                <span className='hidden sm:block'>Book Your Doctor-Led Weight Loss Consultation</span>
               </span>
-            </button>
+              <div className="absolute bg-[#ba736b] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            </button> */}
           </div>
 
           {/* Right side - Image/Placeholder */}
-           <div className="lg:pl-8" id="about">
+          <div className="lg:pl-8 top-0" id="contact">
             <ContactForm />
           </div>
         </div>

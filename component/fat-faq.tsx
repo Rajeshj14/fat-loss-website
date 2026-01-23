@@ -77,7 +77,7 @@ export default function FAQ() {
             <div
               key={index}
               className="border rounded-lg overflow-hidden"
-              style={{ borderColor: "#dcdcdc" }}
+              style={{ borderColor: "#161f2f" }}
             >
               <button
                 onClick={() => toggleFAQ(index)}
@@ -86,7 +86,7 @@ export default function FAQ() {
                 <div className="flex items-start gap-3 flex-1">
                   <span
                     className="font-bold text-lg"
-                    style={{ color: "#d4ad5f" }}
+                    style={{ color: "#ba736b" }}
                   >
                     {index + 1}.
                   </span>
@@ -98,15 +98,15 @@ export default function FAQ() {
                   className="flex-shrink-0 ml-4 w-6 h-6 flex items-center justify-center rounded transition-transform"
                   style={{
                     backgroundColor:
-                      openIndex === index ? "#d4ad5f" : "transparent",
-                    border: `2px solid #d4ad5f`,
+                      openIndex === index ? "#ba736b" : "transparent",
+                    border: `2px solid #ba736b`,
                     transform:
                       openIndex === index ? "rotate(45deg)" : "rotate(0deg)",
                   }}
                 >
                   <span
                     className="text-xl font-light leading-none"
-                    style={{ color: openIndex === index ? "white" : "#d4ad5f" }}
+                    style={{ color: openIndex === index ? "white" : "#ba736b" }}
                   >
                     +
                   </span>
@@ -130,7 +130,7 @@ export default function FAQ() {
                 .querySelector("#contact")
                 ?.scrollIntoView({ behavior: "smooth" })
             }
-            className="bg-gradient-to-t from-[var(--primary-gold)] to-[var(--secondary-silver)] text-white px-8 py-4 rounded-full font-semibold text-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 hover:opacity-95 group relative overflow-hidden"
+            className="bg-[var(--primary-gold)] text-white max-sm:px-5 px-8 py-4 rounded-full font-semibold text-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 hover:opacity-95 group relative overflow-hidden"
           >
             <span className="relative z-10 flex items-center justify-center gap-2">
               <span className="block sm:hidden">Start Your Transformation</span>

@@ -19,8 +19,8 @@ export default function MobileActionBar() {
           py-4 font-semibold text-white
           bg-black
           text-sm
-          bg-gradient-to-t from-[var(--primary-gold)] to-[var(--secondary-silver)] 
-          hover:bg-gradient-to-r hover:from-[var(--secondary-silver)] hover:to-[var(--primary-gold)]
+          bg-gradient-to-t from-[var(--primary-gold)] to-[var(--primary-gold)] 
+          hover:bg-gradient-to-r hover:from-[var(--primary-gold)] hover:to-[var(--primary-gold)]
           active:scale-95 transition
         "
       >

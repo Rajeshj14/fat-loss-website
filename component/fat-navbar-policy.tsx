@@ -30,14 +30,14 @@ const Navbars = () => {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-sm shadow-md z-50">
+    <nav className="fixed top-0 left-0 right-0 bg-[#ba736b] backdrop-blur-sm shadow-md z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-18 md:h-25">
+        <div className="flex justify-between items-center h-18 md:h-30">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <div className="relative w-32 h-22 md:w-50 md:h-26 transition-transform duration-300 hover:scale-105 cursor-pointer">
+            <div className="relative w-35 h-35 md:w-40 md:h-62 transition-transform duration-300 hover:scale-105 cursor-pointer">
               <Image
-                src="/logo.png"
+                src="/logo-2.png"
                 alt="Swetika Skin Clinic"
                 fill
                 className="object-contain"
@@ -53,7 +53,7 @@ const Navbars = () => {
               <button
                 key={link.name}
                 onClick={() => scrollToSection(link.href)}
-                className="text-gray-700 hover:text-[#d4ad5f] transition-colors duration-300 font-medium text-sm lg:text-base"
+                className="text-gray-700 hover:text-[#ba736b] transition-colors duration-300 font-medium text-sm lg:text-base"
               >
                 {link.name}
               </button>
@@ -64,14 +64,14 @@ const Navbars = () => {
           <div className="hidden md:flex items-center space-x-4">
             <a
               href="tel:+918826815442"
-              className="flex items-center gap-2 bg-gradient-to-t from-[#d4ad5f] to-[#c0c0c0] text-white px-4 py-2 rounded-full hover:shadow-lg transition-all duration-300 transform hover:-translate-y-0.5 text-sm lg:text-base"
+              className="flex items-center gap-2 bg-gradient-to-t from-[#ba736b] to-[#ba736b] border-1 border-black text-white px-4 py-2 rounded-full hover:shadow-lg transition-all duration-300 transform hover:-translate-y-0.5 text-sm lg:text-base"
             >
               <Phone className="w-4 h-4 lg:w-5 lg:h-5" />
               +91 8826815442
             </a>
             <button
               onClick={() => scrollToSection("#contact")}
-              className="bg-gradient-to-t from-[#d4ad5f] to-[#c0c0c0] text-white px-4 py-2 rounded-full hover:shadow-lg transition-all duration-300 transform hover:-translate-y-0.5 text-sm lg:text-base"
+              className="bg-gradient-to-t from-[#ba736b] to-[#ba736b] text-white px-4 py-2 rounded-full border-1 border-black hover:shadow-lg transition-all duration-300 transform hover:-translate-y-0.5 text-sm lg:text-base"
             >
               Book Consultation
             </button>
@@ -81,7 +81,7 @@ const Navbars = () => {
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-gray-700 hover:text-[#d4ad5f] transition-colors p-2 rounded-md"
+              className="text-gray-700 hover:text-[#ba736b] transition-colors p-2 rounded-md"
               aria-label="Toggle menu"
             >
               {isOpen ? <X size={24} /> : <Menu size={24} />}
@@ -98,7 +98,7 @@ const Navbars = () => {
               <button
                 key={link.name}
                 onClick={() => scrollToSection(link.href)}
-                className="block w-full text-left px-4 py-3 text-gray-700 hover:text-[#d4ad5f] hover:bg-gray-50 rounded-lg transition-colors text-base font-medium"
+                className="block w-full text-left px-4 py-3 text-gray-700 hover:text-[#ba736b] hover:bg-gray-50 rounded-lg transition-colors text-base font-medium"
               >
                 {link.name}
               </button>
@@ -107,7 +107,7 @@ const Navbars = () => {
             <div className="pt-2 space-y-3">
               <a
                 href="tel:+918826815442"
-                className="flex items-center justify-center gap-2 bg-gradient-to-t from-[#d4ad5f] to-[#c0c0c0] text-white px-6 py-3 rounded-full hover:shadow-lg transition-all duration-300 w-full text-base"
+                className="flex items-center justify-center gap-2 border-1 border-black bg-gradient-to-t from-[#ba736b] to-[#ba736b] text-white px-6 py-3 rounded-full hover:shadow-lg transition-all duration-300 w-full text-base"
               >
                 <Phone className="w-5 h-5" />
                 +91 8826815442
@@ -115,7 +115,7 @@ const Navbars = () => {
 
               <button
                 onClick={() => scrollToSection("#contact")}
-                className="w-full bg-gradient-to-t from-[#d4ad5f] to-[#c0c0c0] text-white px-6 py-3 rounded-full hover:shadow-lg transition-all duration-300 text-base"
+                className="w-full bg-gradient-to-t from-[#ba736b] to-[#ba736b] border-1 border-black text-white px-6 py-3 rounded-full hover:shadow-lg transition-all duration-300 text-base"
               >
                 Book Consultation
               </button>
